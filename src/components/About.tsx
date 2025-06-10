@@ -15,8 +15,8 @@ const About = () => {
             <div className="relative">
               <div className="w-80 h-80 mx-auto bg-gradient-to-br from-purple-500/20 to-blue-500/20 rounded-full flex items-center justify-center">
                 <div className="w-72 h-72 bg-gradient-to-br from-purple-400/30 to-blue-400/30 rounded-full flex items-center justify-center">
-                  <div className="w-64 h-64 bg-card rounded-full flex items-center justify-center shadow-lg shadow-purple-500/20">
-                    <span className="text-6xl font-bold text-purple-400">AJ</span>
+                  <div className="w-64 h-64 bg-card rounded-full flex items-center justify-center">
+                    <span className="text-6xl font-bold text-muted-foreground">AJ</span>
                   </div>
                 </div>
               </div>
@@ -40,11 +40,11 @@ const About = () => {
             </p>
             
             <div className="grid grid-cols-2 gap-4 pt-6">
-              <div className="text-center p-4 bg-purple-500/10 rounded-lg border border-purple-500/20">
+              <div className="text-center p-4 bg-background/50 rounded-lg border border-border">
                 <div className="text-3xl font-bold text-purple-400 mb-2">50+</div>
                 <div className="text-sm text-muted-foreground">Projects Completed</div>
               </div>
-              <div className="text-center p-4 bg-blue-500/10 rounded-lg border border-blue-500/20">
+              <div className="text-center p-4 bg-background/50 rounded-lg border border-border">
                 <div className="text-3xl font-bold text-blue-400 mb-2">5+</div>
                 <div className="text-sm text-muted-foreground">Years Experience</div>
               </div>
