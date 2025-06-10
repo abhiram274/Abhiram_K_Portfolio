@@ -1,14 +1,10 @@
-
 import { useState, useEffect } from "react";
 import { Button } from "@/components/ui/button";
-
 const Hero = () => {
   const [displayText, setDisplayText] = useState("");
   const [currentIndex, setCurrentIndex] = useState(0);
   const [isDeleting, setIsDeleting] = useState(false);
-  
   const titles = ["Web Developer", "Frontend Specialist", "UI/UX Enthusiast", "React Expert"];
-  
   useEffect(() => {
     const currentTitle = titles[currentIndex];
     const timeout = setTimeout(() => {
@@ -23,26 +19,25 @@ const Hero = () => {
           setDisplayText(displayText.slice(0, -1));
         } else {
           setIsDeleting(false);
-          setCurrentIndex((prevIndex) => (prevIndex + 1) % titles.length);
+          setCurrentIndex(prevIndex => (prevIndex + 1) % titles.length);
         }
       }
     }, isDeleting ? 50 : 100);
-
     return () => clearTimeout(timeout);
   }, [displayText, currentIndex, isDeleting, titles]);
-
   const scrollToProjects = () => {
     const element = document.querySelector("#projects");
-    element?.scrollIntoView({ behavior: "smooth" });
+    element?.scrollIntoView({
+      behavior: "smooth"
+    });
   };
-
   const scrollToContact = () => {
     const element = document.querySelector("#contact");
-    element?.scrollIntoView({ behavior: "smooth" });
+    element?.scrollIntoView({
+      behavior: "smooth"
+    });
   };
-
-  return (
-    <section id="home" className="min-h-screen flex items-center justify-center bg-gradient-to-br from-background via-background to-accent/5 relative overflow-hidden">
+  return <section id="home" className="min-h-screen flex items-center justify-center bg-gradient-to-br from-background via-background to-accent/5 relative overflow-hidden">
       {/* Animated background elements */}
       <div className="absolute inset-0 overflow-hidden">
         <div className="absolute -top-40 -right-40 w-80 h-80 bg-purple-500/10 rounded-full blur-3xl animate-pulse"></div>
@@ -65,32 +60,18 @@ const Hero = () => {
             </h2>
           </div>
           
-          <p className="text-lg sm:text-xl text-muted-foreground max-w-3xl mx-auto mb-12 leading-relaxed">
-            I create beautiful, responsive, and user-friendly web applications 
-            using modern technologies and best practices. Let's build something amazing together.
-          </p>
+          <p className="text-lg sm:text-xl text-muted-foreground max-w-3xl mx-auto mb-12 leading-relaxed">I am a web developer, cloud enthusiast, and AI & ML student, passionate about building innovative solutions. Let's connect and explore the possibilities of creating intelligent and scalable applications together.</p>
           
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
-            <Button 
-              onClick={scrollToProjects}
-              size="lg" 
-              className="bg-gradient-to-r from-purple-500 to-blue-500 hover:from-purple-600 hover:to-blue-600 text-white px-8 py-3 text-lg font-semibold transform hover:scale-105 transition-all duration-200"
-            >
+            <Button onClick={scrollToProjects} size="lg" className="bg-gradient-to-r from-purple-500 to-blue-500 hover:from-purple-600 hover:to-blue-600 text-white px-8 py-3 text-lg font-semibold transform hover:scale-105 transition-all duration-200">
               View My Work
             </Button>
-            <Button 
-              onClick={scrollToContact}
-              variant="outline" 
-              size="lg" 
-              className="border-2 border-purple-500/50 text-purple-400 hover:bg-purple-500/10 px-8 py-3 text-lg font-semibold transform hover:scale-105 transition-all duration-200"
-            >
+            <Button onClick={scrollToContact} variant="outline" size="lg" className="border-2 border--500/50 px-8 py-3 text-lg font-semibold transform hover:scale-105 transition-all duration-200 text-blue-400 bg-transparent rounded-none">
               Get In Touch
             </Button>
           </div>
         </div>
       </div>
-    </section>
-  );
+    </section>;
 };
-
 export default Hero;
