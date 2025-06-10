@@ -48,9 +48,7 @@ const Hero = () => {
         <div className="animate-fade-in">
           <h1 className="text-4xl sm:text-6xl lg:text-7xl font-bold mb-6">
             <span className="block text-foreground mb-2">Hi, I'm</span>
-            <span className="block bg-gradient-to-r from-purple-400 via-blue-400 to-purple-400 bg-clip-text text-transparent">
-              Alex Johnson
-            </span>
+            <span className="block bg-gradient-to-r from-purple-400 via-blue-400 to-purple-400 bg-clip-text text-transparent">Abhiram Kosuru</span>
           </h1>
           
           <div className="h-20 flex items-center justify-center mb-8">
@@ -66,7 +64,7 @@ const Hero = () => {
             <Button onClick={scrollToProjects} size="lg" className="bg-gradient-to-r from-purple-500 to-blue-500 hover:from-purple-600 hover:to-blue-600 text-white px-8 py-3 text-lg font-semibold transform hover:scale-105 transition-all duration-200">
               View My Work
             </Button>
-            <Button onClick={scrollToContact} variant="outline" size="lg" className=" hover:from-purple-600 hover:to-blue-600 text-white px-8 py-3 text-lg font-semibold transform hover:scale-105 transition-all duration-200">
+            <Button onClick={scrollToContact} variant="outline" size="lg" className="bg-gradient-to-r from-purple-500 to-blue-500 hover:from-purple-600 hover:to-blue-600 text-white px-8 py-3 text-lg font-semibold transform hover:scale-105 transition-all duration-200">
               Get In Touch
             </Button>
           </div>
