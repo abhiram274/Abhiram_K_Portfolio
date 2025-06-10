@@ -42,20 +42,18 @@ const Hero = () => {
   };
 
   return (
-    <section id="home" className="min-h-screen flex items-center justify-center bg-gradient-to-br from-background via-background to-cyan-50/20 dark:to-cyan-900/10 relative overflow-hidden">
-      {/* Glacier-inspired animated background elements */}
+    <section id="home" className="min-h-screen flex items-center justify-center bg-gradient-to-br from-background via-background to-purple-900/20 relative overflow-hidden">
+      {/* Animated background elements */}
       <div className="absolute inset-0 overflow-hidden">
-        <div className="absolute -top-40 -right-40 w-80 h-80 bg-gradient-to-br from-cyan-300/20 to-blue-400/20 dark:from-cyan-500/10 dark:to-blue-600/10 rounded-full blur-3xl glacial-drift"></div>
-        <div className="absolute -bottom-40 -left-40 w-80 h-80 bg-gradient-to-br from-blue-300/20 to-cyan-400/20 dark:from-blue-500/10 dark:to-cyan-600/10 rounded-full blur-3xl ice-shimmer"></div>
-        <div className="absolute top-1/3 left-1/4 w-32 h-32 bg-cyan-200/30 dark:bg-cyan-400/20 rounded-full blur-2xl frost-pulse"></div>
-        <div className="absolute bottom-1/3 right-1/4 w-24 h-24 bg-blue-200/30 dark:bg-blue-400/20 rounded-full blur-2xl ice-shimmer" style={{ animationDelay: '1.5s' }}></div>
+        <div className="absolute -top-40 -right-40 w-80 h-80 bg-gradient-to-br from-purple-500/20 to-blue-500/20 rounded-full blur-3xl animate-pulse"></div>
+        <div className="absolute -bottom-40 -left-40 w-80 h-80 bg-gradient-to-br from-blue-500/20 to-purple-500/20 rounded-full blur-3xl animate-pulse" style={{ animationDelay: '2s' }}></div>
       </div>
       
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center relative z-10">
         <div className="animate-fade-in">
           <h1 className="text-4xl sm:text-6xl lg:text-7xl font-bold mb-6">
             <span className="block text-foreground mb-2">Hi, I'm</span>
-            <span className="block bg-gradient-to-r from-cyan-400 via-blue-500 to-cyan-300 bg-clip-text text-transparent">
+            <span className="block bg-gradient-to-r from-purple-400 via-blue-500 to-purple-300 bg-clip-text text-transparent">
               Alex Johnson
             </span>
           </h1>
@@ -63,7 +61,7 @@ const Hero = () => {
           <div className="h-20 flex items-center justify-center mb-8">
             <h2 className="text-2xl sm:text-3xl lg:text-4xl text-muted-foreground">
               <span>{displayText}</span>
-              <span className="animate-pulse text-cyan-400">|</span>
+              <span className="animate-pulse text-purple-400">|</span>
             </h2>
           </div>
           
@@ -76,7 +74,7 @@ const Hero = () => {
             <Button 
               onClick={scrollToProjects}
               size="lg" 
-              className="bg-gradient-to-r from-cyan-500 to-blue-500 hover:from-cyan-600 hover:to-blue-600 text-white px-8 py-3 text-lg font-semibold transform hover:scale-105 transition-all duration-200 shadow-lg shadow-cyan-500/25 hover:shadow-cyan-500/40"
+              className="bg-gradient-to-r from-purple-500 to-blue-500 hover:from-purple-600 hover:to-blue-600 text-white px-8 py-3 text-lg font-semibold transform hover:scale-105 transition-all duration-200 shadow-lg shadow-purple-500/25 hover:shadow-purple-500/40"
             >
               View My Work
             </Button>
@@ -84,7 +82,7 @@ const Hero = () => {
               onClick={scrollToContact}
               variant="outline" 
               size="lg" 
-              className="border-2 border-cyan-500/50 text-cyan-600 dark:text-cyan-400 hover:bg-cyan-500/10 px-8 py-3 text-lg font-semibold transform hover:scale-105 transition-all duration-200"
+              className="border-2 border-purple-500/50 text-purple-400 hover:bg-purple-500/10 px-8 py-3 text-lg font-semibold transform hover:scale-105 transition-all duration-200"
             >
               Get In Touch
             </Button>

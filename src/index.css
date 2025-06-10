@@ -3,89 +3,28 @@
 @tailwind components;
 @tailwind utilities;
 
-/* Definition of the design system. All colors, gradients, fonts, etc should be defined here. */
-
 @layer base {
   :root {
-    /* Light mode - Glacier theme */
-    --background: 248 250 252; /* slate-50 */
-    --foreground: 15 23 42; /* slate-900 */
-
-    --card: 255 255 255; /* white */
-    --card-foreground: 15 23 42; /* slate-900 */
-
-    --popover: 255 255 255;
-    --popover-foreground: 15 23 42;
-
-    --primary: 8 145 178; /* cyan-600 */
-    --primary-foreground: 248 250 252; /* slate-50 */
-
-    --secondary: 241 245 249; /* slate-100 */
-    --secondary-foreground: 15 23 42; /* slate-900 */
-
-    --muted: 241 245 249; /* slate-100 */
-    --muted-foreground: 100 116 139; /* slate-500 */
-
-    --accent: 236 254 255; /* cyan-50 */
-    --accent-foreground: 22 78 99; /* cyan-800 */
-
-    --destructive: 239 68 68; /* red-500 */
-    --destructive-foreground: 248 250 252;
-
-    --border: 203 213 225; /* slate-300 */
-    --input: 203 213 225; /* slate-300 */
-    --ring: 8 145 178; /* cyan-600 */
-
-    --radius: 0.5rem;
-
-    --sidebar-background: 248 250 252;
-    --sidebar-foreground: 71 85 105;
-    --sidebar-primary: 8 145 178;
-    --sidebar-primary-foreground: 248 250 252;
-    --sidebar-accent: 241 245 249;
-    --sidebar-accent-foreground: 15 23 42;
-    --sidebar-border: 203 213 225;
-    --sidebar-ring: 8 145 178;
-  }
-
-  .dark {
-    /* Dark mode - Glacier night theme */
-    --background: 3 7 18; /* very dark blue */
-    --foreground: 248 250 252; /* slate-50 */
-
-    --card: 15 23 42; /* slate-800 */
-    --card-foreground: 248 250 252; /* slate-50 */
-
+    --background: 3 7 18;
+    --foreground: 248 250 252;
+    --card: 15 23 42;
+    --card-foreground: 248 250 252;
     --popover: 15 23 42;
     --popover-foreground: 248 250 252;
-
-    --primary: 34 211 238; /* cyan-400 */
-    --primary-foreground: 3 7 18;
-
-    --secondary: 30 41 59; /* slate-700 */
+    --primary: 147 51 234;
+    --primary-foreground: 248 250 252;
+    --secondary: 30 41 59;
     --secondary-foreground: 248 250 252;
-
-    --muted: 30 41 59; /* slate-700 */
-    --muted-foreground: 148 163 184; /* slate-400 */
-
-    --accent: 22 78 99; /* cyan-800 */
-    --accent-foreground: 165 243 252; /* cyan-200 */
-
+    --muted: 30 41 59;
+    --muted-foreground: 148 163 184;
+    --accent: 30 41 59;
+    --accent-foreground: 248 250 252;
     --destructive: 239 68 68;
     --destructive-foreground: 248 250 252;
-
-    --border: 51 65 85; /* slate-600 */
+    --border: 51 65 85;
     --input: 51 65 85;
-    --ring: 34 211 238; /* cyan-400 */
-
-    --sidebar-background: 15 23 42;
-    --sidebar-foreground: 203 213 225;
-    --sidebar-primary: 34 211 238;
-    --sidebar-primary-foreground: 3 7 18;
-    --sidebar-accent: 30 41 59;
-    --sidebar-accent-foreground: 248 250 252;
-    --sidebar-border: 51 65 85;
-    --sidebar-ring: 34 211 238;
+    --ring: 147 51 234;
+    --radius: 0.5rem;
   }
 }
 
@@ -93,37 +32,22 @@
   * {
     @apply border-border;
   }
-
   body {
     @apply bg-background text-foreground;
   }
 }
 
-/* Glacier-inspired animations */
-@keyframes glacial-drift {
-  0%, 100% { transform: translateY(0px) rotate(0deg); }
-  33% { transform: translateY(-10px) rotate(1deg); }
-  66% { transform: translateY(5px) rotate(-1deg); }
+@keyframes fade-in {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
-@keyframes ice-shimmer {
-  0%, 100% { opacity: 0.4; }
-  50% { opacity: 0.8; }
-}
-
-@keyframes frost-pulse {
-  0%, 100% { transform: scale(1); opacity: 0.6; }
-  50% { transform: scale(1.05); opacity: 0.9; }
-}
-
-.glacial-drift {
-  animation: glacial-drift 8s ease-in-out infinite;
-}
-
-.ice-shimmer {
-  animation: ice-shimmer 3s ease-in-out infinite;
-}
-
-.frost-pulse {
-  animation: frost-pulse 4s ease-in-out infinite;
+.animate-fade-in {
+  animation: fade-in 0.6s ease-out;
 }
