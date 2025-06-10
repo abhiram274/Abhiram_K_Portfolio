@@ -1,7 +1,5 @@
-
 const About = () => {
-  return (
-    <section id="about" className="py-20 bg-card/50">
+  return <section id="about" className="py-20 bg-card/50">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-16">
           <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold mb-4">
@@ -24,20 +22,9 @@ const About = () => {
           </div>
           
           <div className="space-y-6 animate-fade-in">
-            <h3 className="text-2xl sm:text-3xl font-bold text-foreground">
-              Passionate Web Developer
-            </h3>
-            <p className="text-lg text-muted-foreground leading-relaxed">
-              With over 5 years of experience in web development, I specialize in creating 
-              modern, scalable, and user-centric applications. My journey started with curiosity 
-              about how websites work, and it has evolved into a passion for crafting digital experiences.
-            </p>
-            <p className="text-lg text-muted-foreground leading-relaxed">
-              I love working with React, TypeScript, and modern CSS frameworks to build 
-              applications that not only look great but also provide exceptional user experiences. 
-              When I'm not coding, you can find me exploring new technologies, contributing to 
-              open-source projects, or mentoring aspiring developers.
-            </p>
+            <h3 className="text-2xl sm:text-3xl font-bold text-foreground">Passionate Tech Enthusiast</h3>
+            <p className="text-lg text-muted-foreground leading-relaxed">As a web developer with over 3 years of experience, I specialize in building modern, scalable, and user-centric applications. My journey began with a curiosity about how websites function and has evolved into a passion for crafting exceptional digital experiences, now enhanced by my interest in cloud technologies, AI, and ML.</p>
+            <p className="text-lg text-muted-foreground leading-relaxed">I enjoy working with React, TypeScript, and modern CSS frameworks to develop applications that are not only visually appealing but also deliver outstanding user experiences. Beyond coding, I dedicate my time to exploring new cloud technologies, AI/ML concepts, contributing to open-source projects, and mentoring aspiring developers in these exciting fields. Let's build something amazing that leverages the power of the cloud and intelligent algorithms!</p>
             
             <div className="grid grid-cols-2 gap-4 pt-6">
               <div className="text-center p-4 bg-background/50 rounded-lg border border-border">
@@ -52,8 +39,6 @@ const About = () => {
           </div>
         </div>
       </div>
-    </section>
-  );
+    </section>;
 };
-
 export default About;
