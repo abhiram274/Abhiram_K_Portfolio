@@ -66,7 +66,7 @@ const Hero = () => {
             <Button onClick={scrollToProjects} size="lg" className="bg-gradient-to-r from-purple-500 to-blue-500 hover:from-purple-600 hover:to-blue-600 text-white px-8 py-3 text-lg font-semibold transform hover:scale-105 transition-all duration-200">
               View My Work
             </Button>
-            <Button onClick={scrollToContact} variant="outline" size="lg" className="border-2 border--500/50 px-8 py-3 text-lg font-semibold transform hover:scale-105 transition-all duration-200 text-blue-400 bg-transparent rounded-none">
+            <Button onClick={scrollToContact} variant="outline" size="lg" className="bg-gradient-to-r from-purple-500 to-blue-500 hover:from-purple-600 hover:to-blue-600 text-white px-8 py-3 text-lg font-semibold transform hover:scale-105 transition-all duration-200">
               Get In Touch
             </Button>
           </div>
