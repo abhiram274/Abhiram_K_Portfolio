@@ -1,5 +1,5 @@
 
-import { Code, Server, Database, Palette } from "lucide-react";
+import { Code, Server, Database, Palette, Brain, Smartphone, HardDrive, Cloud } from "lucide-react";
 
 const Skills = () => {
   const skills = [{
@@ -15,6 +15,34 @@ const Skills = () => {
     iconBg: "bg-green-500",
     technologies: [
       "Node.js", "Python", "Java", "MySQL", "REST APIs", "MongoDB"
+    ]
+  }, {
+    category: "AI & Machine Learning",
+    icon: <Brain className="w-8 h-8" />,
+    iconBg: "bg-pink-500",
+    technologies: [
+      "Python", "TensorFlow", "PyTorch", "Scikit-learn", "OpenAI API", "Pandas"
+    ]
+  }, {
+    category: "Mobile Development",
+    icon: <Smartphone className="w-8 h-8" />,
+    iconBg: "bg-orange-500",
+    technologies: [
+      "React Native", "Flutter", "Swift", "Kotlin", "Expo", "Firebase"
+    ]
+  }, {
+    category: "Database",
+    icon: <HardDrive className="w-8 h-8" />,
+    iconBg: "bg-red-500",
+    technologies: [
+      "MySQL", "PostgreSQL", "MongoDB", "Redis", "SQLite", "Firebase"
+    ]
+  }, {
+    category: "Cloud & DevOps",
+    icon: <Cloud className="w-8 h-8" />,
+    iconBg: "bg-cyan-500",
+    technologies: [
+      "AWS", "Google Cloud", "Azure", "Docker", "Kubernetes", "Terraform"
     ]
   }, {
     category: "Tools & Others",
