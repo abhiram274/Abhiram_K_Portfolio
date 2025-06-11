@@ -1,5 +1,5 @@
 
-import { Code, Server, Database, Palette, Brain, Smartphone, HardDrive, Cloud } from "lucide-react";
+import { Code, Server, Database, Brain, Smartphone, HardDrive, Cloud } from "lucide-react";
 
 const Skills = () => {
   const skills = [{
@@ -42,7 +42,7 @@ const Skills = () => {
     icon: <Cloud className="w-8 h-8" />,
     iconBg: "bg-cyan-500",
     technologies: [
-      "AWS", "Google Cloud", "Azure", "Docker", "Kubernetes", "Terraform"
+      "AWS", "Google Cloud", "Docker"
     ]
   }, {
     category: "Tools & Others",
@@ -67,7 +67,7 @@ const Skills = () => {
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-          {skills.map((skillCategory, index) => (
+          {skills.slice(0, 6).map((skillCategory, index) => (
             <div key={skillCategory.category} className="animate-fade-in">
               <div className="bg-card rounded-lg p-6 border border-border hover:border-purple-500/50 transition-all duration-300 h-full">
                 <div className="flex flex-col items-center mb-6">
@@ -94,6 +94,35 @@ const Skills = () => {
               </div>
             </div>
           ))}
+        </div>
+
+        {/* Centered Tools & Others card */}
+        <div className="flex justify-center mt-8">
+          <div className="w-full max-w-sm animate-fade-in">
+            <div className="bg-card rounded-lg p-6 border border-border hover:border-purple-500/50 transition-all duration-300 h-full">
+              <div className="flex flex-col items-center mb-6">
+                <div className={`${skills[6].iconBg} rounded-lg p-3 mb-4`}>
+                  <div className="text-white">
+                    {skills[6].icon}
+                  </div>
+                </div>
+                <h3 className="text-xl font-bold text-foreground text-center">
+                  {skills[6].category}
+                </h3>
+              </div>
+              
+              <div className="flex flex-wrap gap-2 justify-center">
+                {skills[6].technologies.map(tech => (
+                  <span 
+                    key={tech} 
+                    className="px-3 py-1 bg-muted rounded-full text-sm font-medium text-foreground hover:bg-purple-500/20 transition-colors duration-200"
+                  >
+                    {tech}
+                  </span>
+                ))}
+              </div>
+            </div>
+          </div>
         </div>
       </div>
     </section>

@@ -4,6 +4,7 @@ import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { useToast } from "@/hooks/use-toast";
+import { Mail, Linkedin, Github } from "lucide-react";
 
 const Contact = () => {
   const [formData, setFormData] = useState({
@@ -62,7 +63,7 @@ const Contact = () => {
             <div className="space-y-6">
               <div className="flex items-center space-x-4">
                 <div className="w-12 h-12 bg-gradient-to-r from-purple-500 to-blue-500 rounded-full flex items-center justify-center">
-                  <span className="text-white font-semibold">📧</span>
+                  <Mail className="w-6 h-6 text-white" />
                 </div>
                 <div>
                   <div className="font-semibold text-foreground">Email</div>
@@ -72,7 +73,7 @@ const Contact = () => {
               
               <div className="flex items-center space-x-4">
                 <div className="w-12 h-12 bg-gradient-to-r from-purple-500 to-blue-500 rounded-full flex items-center justify-center">
-                  <span className="text-white font-semibold">💼</span>
+                  <Linkedin className="w-6 h-6 text-white" />
                 </div>
                 <div>
                   <div className="font-semibold text-foreground">LinkedIn</div>
@@ -82,7 +83,7 @@ const Contact = () => {
               
               <div className="flex items-center space-x-4">
                 <div className="w-12 h-12 bg-gradient-to-r from-purple-500 to-blue-500 rounded-full flex items-center justify-center">
-                  <span className="text-white font-semibold">🐙</span>
+                  <Github className="w-6 h-6 text-white" />
                 </div>
                 <div>
                   <div className="font-semibold text-foreground">GitHub</div>
