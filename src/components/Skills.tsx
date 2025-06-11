@@ -1,3 +1,4 @@
+
 const Skills = () => {
   const skills = [{
     category: "Frontend",
@@ -29,17 +30,17 @@ const Skills = () => {
       name: "Python",
       level: 80
     }, {
-      name: "PostgreSQL",
-      level: 82
+      name: "Java",
+      level: 95
     }, {
-      name: "MongoDB",
-      level: 78
+      name: "MySQL",
+      level: 95
     }, {
       name: "REST APIs",
       level: 90
     }, {
-      name: "GraphQL",
-      level: 75
+      name: "MongoDB",
+      level: 78
     }]
   }, {
     category: "Tools & Others",
@@ -63,7 +64,9 @@ const Skills = () => {
       level: 78
     }]
   }];
-  return <section id="skills" className="py-20 bg-background">
+
+  return (
+    <section id="skills" className="py-20 bg-background">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-16">
           <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold mb-4">
@@ -76,28 +79,27 @@ const Skills = () => {
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-          {skills.map((skillCategory, index) => <div key={skillCategory.category} className="animate-fade-in">
-              <div className="bg-card/50 backdrop-blur-sm rounded-lg p-6 border border-border hover:border-purple-500/50 transition-all duration-300 h-full">
+          {skills.map((skillCategory, index) => (
+            <div key={skillCategory.category} className="animate-fade-in">
+              <div className="bg-card rounded-lg p-6 border border-border hover:border-purple-500/50 transition-all duration-300 h-full">
                 <h3 className="text-xl font-bold text-foreground mb-6 text-center">
                   {skillCategory.category}
                 </h3>
                 <div className="space-y-4">
-                  {skillCategory.technologies.map(tech => <div key={tech.name}>
-                      <div className="flex justify-between items-center mb-2">
-                        <span className="text-sm font-medium text-foreground">{tech.name}</span>
-                        <span className="text-sm text-muted-foreground">{tech.level}%</span>
-                      </div>
-                      <div className="w-full bg-muted rounded-full h-2">
-                        <div style={{
-                    width: `${tech.level}%`
-                  }} className="bg-gradient-to-r from-purple-500 to-blue-500 h-2 rounded-full transition-all duration-1000 ease-out "></div>
-                      </div>
-                    </div>)}
+                  {skillCategory.technologies.map(tech => (
+                    <div key={tech.name} className="flex justify-between items-center">
+                      <span className="text-sm font-medium text-foreground">{tech.name}</span>
+                      <span className="text-sm text-purple-400 font-semibold">{tech.level}%</span>
+                    </div>
+                  ))}
                 </div>
               </div>
-            </div>)}
+            </div>
+          ))}
         </div>
       </div>
-    </section>;
+    </section>
+  );
 };
+
 export default Skills;
