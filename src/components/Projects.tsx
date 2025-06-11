@@ -16,18 +16,42 @@ const projects = [
     featured: false
   },
 
+    {
+    id: 7,
+    title: "Readgro",
+    description: "Designed and deployed a Next.js-based web app for learning courses, referrals, and earning. Backend powered by Node.js with secure authentication.",
+    technologies: ["Next.js", "Node.js", "MongoDB", "Tailwind CSS"],
+    image: "/lovable-uploads/readgro-img.png",
+    github: "https://github.com/abhiram274/ReadGro",
+    live: "https://www.readgro.com/",
+    featured: true
+  },
+
 
   {
     id: 3,
     title: "College Website Development",
     description: "Developed a fully functional college website with front-end and back-end integration. Utilized HTML, CSS, JavaScript, SCSS, PHP, and SQL.",
     technologies: ["HTML", "CSS", "JavaScript", "PHP", "SQL"],
-    image: "/lovable-uploads/gpt-akp2.png",
+    image: "/lovable-uploads/gpt-akp3.png",
     github: "#",
     live: "#",
     featured: false
   },
 
+  {
+    id: 9,
+    title: "Community Web Application ",
+    description: "Community-based web app named MMK UNIVERSE allowing users to create events or programs for free and connect within the community.",
+    technologies: ["React", "Node.js", "MongoDB", "Tailwind CSS"],
+    image: "/images/community-app.png",
+    github: "https://github.com/abhiram274/mmkuniverse-main",
+    live: "https://mmkuniverse-main.vercel.app/",
+    featured: true
+  },
+
+
+  
   {
     id: 4,
     title: "Chatting Web Application",
@@ -51,16 +75,7 @@ description: "Implemented core machine learning algorithms and real-world projec
   },
   
 
-  {
-    id: 7,
-    title: "Readgro",
-    description: "Designed and deployed a Next.js-based web app for learning courses, referrals, and earning. Backend powered by Node.js with secure authentication.",
-    technologies: ["Next.js", "Node.js", "MongoDB", "Tailwind CSS"],
-    image: "/lovable-uploads/readgro.svg",
-    github: "https://github.com/abhiram274/ReadGro",
-    live: "https://www.readgro.com/",
-    featured: true
-  },
+
 
   {
     id: 8,
@@ -73,16 +88,7 @@ description: "Implemented core machine learning algorithms and real-world projec
     featured: false
   },
 
-  {
-    id: 9,
-    title: "Community Web Application ",
-    description: "Community-based web app named MMK UNIVERSE allowing users to create events or programs for free and connect within the community.",
-    technologies: ["React", "Node.js", "MongoDB", "Tailwind CSS"],
-    image: "/images/community-app.svg",
-    github: "https://github.com/abhiram274/mmkuniverse-main",
-    live: "https://mmkuniverse-main.vercel.app/",
-    featured: true
-  },
+
 
   {
     id: 10,
