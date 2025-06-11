@@ -44,7 +44,7 @@ const projects = [
     title: "Community Web Application ",
     description: "Community-based web app named MMK UNIVERSE allowing users to create events or programs for free and connect within the community.",
     technologies: ["React", "Node.js", "MongoDB", "Tailwind CSS"],
-    image: "/loveable-uploads/community-app.png",
+    image: "/community-app.png",
     github: "https://github.com/abhiram274/mmkuniverse-main",
     live: "https://mmkuniverse-main.vercel.app/",
     featured: false
@@ -93,7 +93,7 @@ description: "Implemented core machine learning algorithms and real-world projec
     title: "Flutter-Based Mini Projects",
     description: "Built applications like OTP Generator and To-Do List App using Flutter and Dart. Integrated Node.js for backend operations.",
     technologies: ["Flutter", "Dart", "Node.js"],
-    image: "/lovable-uploads/flutter-apps.png",
+    image: "/flutter-apps.png",
     github: "#",
     live: "#",
     featured: false
