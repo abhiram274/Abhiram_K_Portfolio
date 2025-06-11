@@ -33,18 +33,18 @@ const projects = [
     title: "College Website Development",
     description: "Developed a fully functional college website with front-end and back-end integration. Utilized HTML, CSS, JavaScript, SCSS, PHP, and SQL.",
     technologies: ["HTML", "CSS", "JavaScript", "PHP", "SQL"],
-    image: "/lovable-uploads/gpt-akp3.png",
+    // image: "/lovable-uploads/gpt-akp3.png",
     github: "#",
     live: "#",
     featured: false
   },
 
   {
-    id: 9,
+    id: 6,
     title: "Community Web Application ",
     description: "Community-based web app named MMK UNIVERSE allowing users to create events or programs for free and connect within the community.",
     technologies: ["React", "Node.js", "MongoDB", "Tailwind CSS"],
-    image: "/loveable-uploads/gpt-akp3.png",
+    image: "/loveable-uploads/community-app.png",
     github: "https://github.com/abhiram274/mmkuniverse-main",
     live: "https://mmkuniverse-main.vercel.app/",
     featured: true
