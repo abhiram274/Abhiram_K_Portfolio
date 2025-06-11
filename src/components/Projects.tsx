@@ -3,26 +3,7 @@ import { Button } from "@/components/ui/button";
 
 const Projects = () => {
 const projects = [
-  {
-    id: 1,
-    title: "E-Commerce Platform",
-    description: "A full-stack e-commerce solution built with React, Node.js, and PostgreSQL. Features include user authentication, payment processing, and admin dashboard.",
-    technologies: ["React", "Node.js", "PostgreSQL", "Stripe", "Tailwind CSS"],
-    image: "/placeholder.svg",
-    github: "#",
-    live: "#",
-    featured: true
-  },
-  {
-    id: 2,
-    title: "Task Management App",
-    description: "A collaborative task management application with real-time updates, drag-and-drop functionality, and team collaboration features.",
-    technologies: ["Next.js", "TypeScript", "Prisma", "Socket.io", "Framer Motion"],
-    image: "/placeholder.svg",
-    github: "#",
-    live: "#",
-    featured: true
-  },
+
   {
     id: 3,
     title: "AI Virtual Assistant",
@@ -33,46 +14,51 @@ const projects = [
     live: "#",
     featured: false
   },
+  
   {
     id: 4,
     title: "College Website Development",
     description: "Developed a fully functional college website with front-end and back-end integration. Utilized HTML, CSS, JavaScript, SCSS, PHP, and SQL.",
     technologies: ["HTML", "CSS", "JavaScript", "PHP", "SQL"],
-    image: "/images/college-website.svg",
+    image: "/lovable-uploads/college-website.svg",
     github: "#",
     live: "#",
     featured: false
   },
+
   {
     id: 5,
     title: "Chatting Web Application",
     description: "Created a real-time chatting web app with modern UI using React and Firebase. Implemented authentication, real-time messaging, and user-friendly interface.",
     technologies: ["React", "Firebase", "JavaScript"],
-    image: "/images/chat-app.svg",
+    image: "/lovable-uploads/chat-app.png",
     github: "#",
     live: "#",
     featured: false
   },
+
   {
     id: 6,
-    title: "Management Systems",
+    title: "Machine Learning Concepts",
     description: "Developed various management systems like Internship and Website Management Systems. Focused on user accessibility, security, and automation.",
     technologies: ["HTML", "CSS", "PHP", "MySQL"],
-    image: "/images/management-system.svg",
-    github: "#",
-    live: "#",
+    image: "/lovable-uploads/machine-learning.jpg",
+    github: "https://github.com/abhiram274/MachineLearning_concepts",
+    live: "",
     featured: false
   },
+
   {
     id: 7,
     title: "Readgro",
     description: "Designed and deployed a Next.js-based web app for learning courses, referrals, and earning. Backend powered by Node.js with secure authentication.",
     technologies: ["Next.js", "Node.js", "MongoDB", "Tailwind CSS"],
-    image: "/images/readgro.svg",
+    image: "/lovable-uploads/readgro.svg",
     github: "https://github.com/abhiram274/ReadGro",
     live: "https://www.readgro.com/",
     featured: true
   },
+
   {
     id: 8,
     title: "Flutter-Based Mini Projects",
@@ -83,6 +69,7 @@ const projects = [
     live: "#",
     featured: false
   },
+
   {
     id: 9,
     title: "Community Web Application ",
@@ -93,6 +80,7 @@ const projects = [
     live: "https://mmkuniverse-main.vercel.app/",
     featured: true
   },
+
   {
     id: 10,
     title: "Weather Dashboard",
@@ -103,6 +91,7 @@ const projects = [
     live: "#",
     featured: false
   },
+
   {
     id: 11,
     title: "Portfolio Website",
