@@ -22,7 +22,7 @@ const projects = [
     title: "College Website Development",
     description: "Developed a fully functional college website with front-end and back-end integration. Utilized HTML, CSS, JavaScript, SCSS, PHP, and SQL.",
     technologies: ["HTML", "CSS", "JavaScript", "PHP", "SQL"],
-    image: "/lovable-uploads/gpt-akp.png",
+    image: "/lovable-uploads/gpt-akp2.png",
     github: "#",
     live: "#",
     featured: false
