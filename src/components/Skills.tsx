@@ -1,68 +1,28 @@
 
+import { Code, Server, Database, Palette } from "lucide-react";
+
 const Skills = () => {
   const skills = [{
     category: "Frontend",
-    technologies: [{
-      name: "React",
-      level: 95
-    }, {
-      name: "TypeScript",
-      level: 90
-    }, {
-      name: "Next.js",
-      level: 88
-    }, {
-      name: "Tailwind CSS",
-      level: 92
-    }, {
-      name: "JavaScript",
-      level: 95
-    }, {
-      name: "HTML/CSS",
-      level: 98
-    }]
+    icon: <Code className="w-8 h-8" />,
+    iconBg: "bg-blue-500",
+    technologies: [
+      "React", "TypeScript", "Next.js", "Tailwind CSS", "JavaScript", "HTML/CSS"
+    ]
   }, {
-    category: "Backend",
-    technologies: [{
-      name: "Node.js",
-      level: 85
-    }, {
-      name: "Python",
-      level: 80
-    }, {
-      name: "Java",
-      level: 95
-    }, {
-      name: "MySQL",
-      level: 95
-    }, {
-      name: "REST APIs",
-      level: 90
-    }, {
-      name: "MongoDB",
-      level: 78
-    }]
+    category: "Backend", 
+    icon: <Server className="w-8 h-8" />,
+    iconBg: "bg-green-500",
+    technologies: [
+      "Node.js", "Python", "Java", "MySQL", "REST APIs", "MongoDB"
+    ]
   }, {
     category: "Tools & Others",
-    technologies: [{
-      name: "Git",
-      level: 92
-    }, {
-      name: "Docker",
-      level: 75
-    }, {
-      name: "AWS",
-      level: 70
-    }, {
-      name: "Figma",
-      level: 85
-    }, {
-      name: "Testing",
-      level: 80
-    }, {
-      name: "CI/CD",
-      level: 78
-    }]
+    icon: <Database className="w-8 h-8" />,
+    iconBg: "bg-purple-500", 
+    technologies: [
+      "Git", "Docker", "AWS", "Figma", "Testing", "CI/CD"
+    ]
   }];
 
   return (
@@ -82,15 +42,25 @@ const Skills = () => {
           {skills.map((skillCategory, index) => (
             <div key={skillCategory.category} className="animate-fade-in">
               <div className="bg-card rounded-lg p-6 border border-border hover:border-purple-500/50 transition-all duration-300 h-full">
-                <h3 className="text-xl font-bold text-foreground mb-6 text-center">
-                  {skillCategory.category}
-                </h3>
-                <div className="space-y-4">
-                  {skillCategory.technologies.map(tech => (
-                    <div key={tech.name} className="flex justify-between items-center">
-                      <span className="text-sm font-medium text-foreground">{tech.name}</span>
-                      <span className="text-sm text-purple-400 font-semibold">{tech.level}%</span>
+                <div className="flex flex-col items-center mb-6">
+                  <div className={`${skillCategory.iconBg} rounded-lg p-3 mb-4`}>
+                    <div className="text-white">
+                      {skillCategory.icon}
                     </div>
+                  </div>
+                  <h3 className="text-xl font-bold text-foreground text-center">
+                    {skillCategory.category}
+                  </h3>
+                </div>
+                
+                <div className="flex flex-wrap gap-2 justify-center">
+                  {skillCategory.technologies.map(tech => (
+                    <span 
+                      key={tech} 
+                      className="px-3 py-1 bg-muted rounded-full text-sm font-medium text-foreground hover:bg-purple-500/20 transition-colors duration-200"
+                    >
+                      {tech}
+                    </span>
                   ))}
                 </div>
               </div>
