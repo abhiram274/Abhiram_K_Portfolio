@@ -61,9 +61,8 @@ const Hero = () => {
           <p className="text-lg sm:text-xl text-muted-foreground max-w-3xl mx-auto mb-12 leading-relaxed">I am a web developer, cloud enthusiast, and AI & ML student, passionate about building innovative solutions. Let's connect and explore the possibilities of creating intelligent and scalable applications together.</p>
           
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
-            <Button onClick={scrollToProjects} size="lg" className="bg-gradient-to-r from-purple-500 to-blue-500 hover:from-purple-600 hover:to-blue-600 text-white px-8 py-3 text-lg font-semibold transform hover:scale-105 transition-all duration-200">
-              View My Work
-            </Button>
+            <Button onClick={scrollToProjects} size="lg" className="bg-gradient-to-r from-purple-500 to-blue-500 hover:from-purple-600 hover:to-blue-600 text-white px-8 py-3 text-lg font-semibold transform hover:scale-105 transition-all duration-200">My resume
+          </Button>
             <Button onClick={scrollToContact} variant="outline" size="lg" className="bg-gradient-to-r from-purple-500 to-blue-500 hover:from-purple-600 hover:to-blue-600 text-white px-8 py-3 text-lg font-semibold transform hover:scale-105 transition-all duration-200">
               Get In Touch
             </Button>
