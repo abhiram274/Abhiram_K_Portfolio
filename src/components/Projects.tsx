@@ -4,13 +4,25 @@ import { Button } from "@/components/ui/button";
 const Projects = () => {
 const projects = [
 
+  
+  {
+    id: 2,
+    title: "Machine Learning Concepts",
+    description: "Developed various management systems like Internship and Website Management Systems. Focused on user accessibility, security, and automation.",
+    technologies: ["HTML", "CSS", "PHP", "MySQL"],
+      image: "/lovable-uploads/machine-learning.jpg", 
+    github: "https://github.com/abhiram274/MachineLearning_concepts",
+    live: "",
+    featured: false
+  },
+
 
   {
     id: 3,
     title: "College Website Development",
     description: "Developed a fully functional college website with front-end and back-end integration. Utilized HTML, CSS, JavaScript, SCSS, PHP, and SQL.",
     technologies: ["HTML", "CSS", "JavaScript", "PHP", "SQL"],
-    image: "/lovable-uploads/college-website.svg",
+    image: "/lovable-uploads/gpt-akp.png",
     github: "#",
     live: "#",
     featured: false
@@ -38,17 +50,6 @@ description: "Implemented core machine learning algorithms and real-world projec
     featured: false
   },
   
-
-  {
-    id: 2,
-    title: "Machine Learning Concepts",
-    description: "Developed various management systems like Internship and Website Management Systems. Focused on user accessibility, security, and automation.",
-    technologies: ["HTML", "CSS", "PHP", "MySQL"],
-      image: "/lovable-uploads/machine-learning.jpg", 
-    github: "https://github.com/abhiram274/MachineLearning_concepts",
-    live: "",
-    featured: false
-  },
 
   {
     id: 7,
