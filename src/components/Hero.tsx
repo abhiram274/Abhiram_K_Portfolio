@@ -53,7 +53,7 @@ const Hero = () => {
           
           <div className="h-20 flex items-center justify-center mb-8">
             <h2 className="text-2xl sm:text-3xl lg:text-4xl text-muted-foreground">
-              <span>{displayText}</span>
+              <span className="font-normal">{displayText}</span>
               <span className="animate-pulse">|</span>
             </h2>
           </div>
