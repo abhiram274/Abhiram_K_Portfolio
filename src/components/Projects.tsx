@@ -10,7 +10,7 @@ const projects = [
     title: "Machine Learning Concepts",
     description: "Developed various management systems like Internship and Website Management Systems. Focused on user accessibility, security, and automation.",
     technologies: ["HTML", "CSS", "PHP", "MySQL"],
-    image: "/lovable-uploads/community-app.png", 
+    image: "/lovable-uploads/machine-learning.png", 
     github: "https://github.com/abhiram274/MachineLearning_concepts",
     live: "",
     featured: false
@@ -50,17 +50,6 @@ const projects = [
     featured: false
   },
 
-  // {
-  //   id: 6,
-  //   title: "Community Web Application ",
-  //   description: "Community-based web app named MMK UNIVERSE allowing users to create events or programs for free and connect within the community.",
-  //   technologies: ["React", "Node.js", "MongoDB", "Tailwind CSS"],
-  //   image: "/loveable-uploads/community-app.png",
-  //   github: "https://github.com/abhiram274/mmkuniverse-main",
-  //   live: "https://mmkuniverse-main.vercel.app/",
-  //   featured: true
-  // },
-
 
   
   {
@@ -93,7 +82,7 @@ description: "Implemented core machine learning algorithms and real-world projec
     title: "Flutter-Based Mini Projects",
     description: "Built applications like OTP Generator and To-Do List App using Flutter and Dart. Integrated Node.js for backend operations.",
     technologies: ["Flutter", "Dart", "Node.js"],
-    image: "/flutter-apps.png",
+    image: "/flutter-apps.jpg",
     github: "#",
     live: "#",
     featured: false
