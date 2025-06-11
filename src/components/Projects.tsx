@@ -6,7 +6,7 @@ const projects = [
 
   
   {
-    id: 2,
+    id: 1,
     title: "Machine Learning Concepts",
     description: "Developed various management systems like Internship and Website Management Systems. Focused on user accessibility, security, and automation.",
     technologies: ["HTML", "CSS", "PHP", "MySQL"],
@@ -17,7 +17,7 @@ const projects = [
   },
 
     {
-    id: 7,
+    id: 2,
     title: "Readgro",
     description: "Designed and deployed a Next.js-based web app for learning courses, referrals, and earning. Backend powered by Node.js with secure authentication.",
     technologies: ["Next.js", "Node.js", "MongoDB", "Tailwind CSS"],
@@ -33,27 +33,38 @@ const projects = [
     title: "College Website Development",
     description: "Developed a fully functional college website with front-end and back-end integration. Utilized HTML, CSS, JavaScript, SCSS, PHP, and SQL.",
     technologies: ["HTML", "CSS", "JavaScript", "PHP", "SQL"],
-    // image: "/lovable-uploads/gpt-akp3.png",
+    image: "/lovable-uploads/gpt-akp3.png",
     github: "#",
     live: "#",
     featured: false
   },
 
-  {
-    id: 6,
+    {
+    id: 4,
     title: "Community Web Application ",
     description: "Community-based web app named MMK UNIVERSE allowing users to create events or programs for free and connect within the community.",
     technologies: ["React", "Node.js", "MongoDB", "Tailwind CSS"],
     image: "/loveable-uploads/community-app.png",
     github: "https://github.com/abhiram274/mmkuniverse-main",
     live: "https://mmkuniverse-main.vercel.app/",
-    featured: true
+    featured: false
   },
+
+  // {
+  //   id: 6,
+  //   title: "Community Web Application ",
+  //   description: "Community-based web app named MMK UNIVERSE allowing users to create events or programs for free and connect within the community.",
+  //   technologies: ["React", "Node.js", "MongoDB", "Tailwind CSS"],
+  //   image: "/loveable-uploads/community-app.png",
+  //   github: "https://github.com/abhiram274/mmkuniverse-main",
+  //   live: "https://mmkuniverse-main.vercel.app/",
+  //   featured: true
+  // },
 
 
   
   {
-    id: 4,
+    id: 5,
     title: "Chatting Web Application",
     description: "Created a real-time chatting web app with modern UI using React and Firebase. Implemented authentication, real-time messaging, and user-friendly interface.",
     technologies: ["React", "Firebase", "JavaScript"],
@@ -64,7 +75,7 @@ const projects = [
   },
 
     {
-    id: 5,
+    id: 6,
     title: "Panda AI Virtual Assistant",
 description: "Implemented core machine learning algorithms and real-world projects such as linear regression for house price prediction, heart disease classification, and face recognition. Focused on model accuracy, data preprocessing, and practical ML applications.",
     technologies: ["Python", "Speech Recognition", "NLP"],
@@ -78,11 +89,11 @@ description: "Implemented core machine learning algorithms and real-world projec
 
 
   {
-    id: 8,
+    id: 7,
     title: "Flutter-Based Mini Projects",
     description: "Built applications like OTP Generator and To-Do List App using Flutter and Dart. Integrated Node.js for backend operations.",
     technologies: ["Flutter", "Dart", "Node.js"],
-    image: "/images/flutter-mini.svg",
+    image: "/lovable-uploads/flutter-apps.png",
     github: "#",
     live: "#",
     featured: false
@@ -90,7 +101,7 @@ description: "Implemented core machine learning algorithms and real-world projec
 
 
   {
-    id: 11,
+    id: 8,
     title: "Portfolio Website",
     description: "A responsive portfolio website showcasing modern design principles and smooth animations.",
     technologies: ["React", "Tailwind CSS", "Framer Motion", "TypeScript"],
