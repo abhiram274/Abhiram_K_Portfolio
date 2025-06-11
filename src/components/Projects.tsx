@@ -40,7 +40,7 @@ description: "Implemented core machine learning algorithms and real-world projec
   
 
   {
-    id: 6,
+    id: 2,
     title: "Machine Learning Concepts",
     description: "Developed various management systems like Internship and Website Management Systems. Focused on user accessibility, security, and automation.",
     technologies: ["HTML", "CSS", "PHP", "MySQL"],
