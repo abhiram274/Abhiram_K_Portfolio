@@ -10,7 +10,7 @@ const projects = [
     title: "Machine Learning Concepts",
     description: "Developed various management systems like Internship and Website Management Systems. Focused on user accessibility, security, and automation.",
     technologies: ["HTML", "CSS", "PHP", "MySQL"],
-    image: "/lovable-uploads/machine-learning.png", 
+    image: "/lovable-uploads/machine-learning.jpg", 
     github: "https://github.com/abhiram274/MachineLearning_concepts",
     live: "",
     featured: false
@@ -94,7 +94,7 @@ description: "Implemented core machine learning algorithms and real-world projec
     title: "Portfolio Website",
     description: "A responsive portfolio website showcasing modern design principles and smooth animations.",
     technologies: ["React", "Tailwind CSS", "Framer Motion", "TypeScript"],
-    image: "/placeholder.svg",
+    image: "/abhi-portfolio.png",
     github: "",
     live: "",
     featured: false
