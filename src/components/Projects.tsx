@@ -89,39 +89,18 @@ description: "Implemented core machine learning algorithms and real-world projec
   },
 
 
-
-  {
-    id: 10,
-    title: "Weather Dashboard",
-    description: "A beautiful weather dashboard with detailed forecasts, interactive maps, and location-based recommendations.",
-    technologies: ["React", "Weather API", "Chart.js", "Geolocation"],
-    image: "/placeholder.svg",
-    github: "#",
-    live: "#",
-    featured: false
-  },
-
   {
     id: 11,
     title: "Portfolio Website",
     description: "A responsive portfolio website showcasing modern design principles and smooth animations.",
     technologies: ["React", "Tailwind CSS", "Framer Motion", "TypeScript"],
     image: "/placeholder.svg",
-    github: "#",
-    live: "#",
+    github: "",
+    live: "",
     featured: false
   },
  
-  {
-    id: 13,
-    title: "AI Chat Bot",
-    description: "An intelligent chatbot powered by machine learning with natural language processing capabilities.",
-    technologies: ["Python", "TensorFlow", "React", "Flask", "NLP"],
-    image: "/placeholder.svg",
-    github: "#",
-    live: "#",
-    featured: false
-  }
+
 ];
 
 
