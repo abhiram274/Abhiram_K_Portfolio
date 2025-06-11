@@ -1,4 +1,3 @@
-
 const About = () => {
   return <section id="about" className="py-20 bg-card/50">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -15,11 +14,7 @@ const About = () => {
               <div className="w-80 h-80 mx-auto bg-gradient-to-br from-purple-500/20 to-blue-500/20 rounded-full flex items-center justify-center">
                 <div className="w-72 h-72 bg-gradient-to-br from-purple-400/30 to-blue-400/30 rounded-full flex items-center justify-center">
                   <div className="w-64 h-64 bg-card rounded-full flex items-center justify-center relative group overflow-hidden">
-                    <img 
-                      src="/lovable-uploads/713fa653-0787-4be4-abac-21c4f5038add.png" 
-                      alt="Profile" 
-                      className="w-full h-full object-cover rounded-full"
-                    />
+                    <img src="/lovable-uploads/713fa653-0787-4be4-abac-21c4f5038add.png" alt="Profile" className="w-full h-full object-cover rounded-full" />
                     <div className="absolute inset-0 bg-black/60 rounded-full flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
                       <span className="text-4xl font-bold text-white">ARK</span>
                     </div>
@@ -36,11 +31,11 @@ const About = () => {
             
             <div className="grid grid-cols-2 gap-4 pt-6">
               <div className="text-center p-4 bg-background/50 rounded-lg border border-border">
-                <div className="text-3xl font-bold text-purple-400 mb-2">50+</div>
+                <div className="text-3xl font-bold text-purple-400 mb-2">10+</div>
                 <div className="text-sm text-muted-foreground">Projects Completed</div>
               </div>
               <div className="text-center p-4 bg-background/50 rounded-lg border border-border">
-                <div className="text-3xl font-bold text-blue-400 mb-2">5+</div>
+                <div className="text-3xl font-bold text-blue-400 mb-2">3+</div>
                 <div className="text-sm text-muted-foreground">Years Experience</div>
               </div>
             </div>

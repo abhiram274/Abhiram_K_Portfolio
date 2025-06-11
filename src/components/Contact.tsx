@@ -1,11 +1,9 @@
-
 import { useState } from "react";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { useToast } from "@/hooks/use-toast";
 import { Mail, Linkedin, Github } from "lucide-react";
-
 const Contact = () => {
   const [formData, setFormData] = useState({
     name: "",
@@ -14,32 +12,35 @@ const Contact = () => {
     message: ""
   });
   const [isSubmitting, setIsSubmitting] = useState(false);
-  const { toast } = useToast();
-
+  const {
+    toast
+  } = useToast();
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
     setFormData({
       ...formData,
       [e.target.name]: e.target.value
     });
   };
-
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     setIsSubmitting(true);
-    
+
     // Simulate form submission
     setTimeout(() => {
       toast({
         title: "Message Sent!",
-        description: "Thank you for your message. I'll get back to you soon!",
+        description: "Thank you for your message. I'll get back to you soon!"
       });
-      setFormData({ name: "", email: "", subject: "", message: "" });
+      setFormData({
+        name: "",
+        email: "",
+        subject: "",
+        message: ""
+      });
       setIsSubmitting(false);
     }, 1000);
   };
-
-  return (
-    <section id="contact" className="py-20 bg-background">
+  return <section id="contact" className="py-20 bg-background">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-16">
           <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold mb-4">
@@ -67,7 +68,7 @@ const Contact = () => {
                 </div>
                 <div>
                   <div className="font-semibold text-foreground">Email</div>
-                  <div className="text-muted-foreground">alex.johnson@email.com</div>
+                  <div className="text-muted-foreground">abhiramkosuru967@email.com</div>
                 </div>
               </div>
               
@@ -77,7 +78,7 @@ const Contact = () => {
                 </div>
                 <div>
                   <div className="font-semibold text-foreground">LinkedIn</div>
-                  <div className="text-muted-foreground">linkedin.com/in/alexjohnson</div>
+                  <div className="text-muted-foreground">linkedin.com/in/abhiram-kosuru</div>
                 </div>
               </div>
               
@@ -87,7 +88,7 @@ const Contact = () => {
                 </div>
                 <div>
                   <div className="font-semibold text-foreground">GitHub</div>
-                  <div className="text-muted-foreground">github.com/alexjohnson</div>
+                  <div className="text-muted-foreground">github.com/abhiram274</div>
                 </div>
               </div>
             </div>
@@ -98,66 +99,28 @@ const Contact = () => {
             <form onSubmit={handleSubmit} className="space-y-6">
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                 <div>
-                  <Input
-                    type="text"
-                    name="name"
-                    placeholder="Your Name"
-                    value={formData.name}
-                    onChange={handleChange}
-                    required
-                    className="bg-card/50 border-border focus:border-purple-500 transition-colors duration-200"
-                  />
+                  <Input type="text" name="name" placeholder="Your Name" value={formData.name} onChange={handleChange} required className="bg-card/50 border-border focus:border-purple-500 transition-colors duration-200" />
                 </div>
                 <div>
-                  <Input
-                    type="email"
-                    name="email"
-                    placeholder="Your Email"
-                    value={formData.email}
-                    onChange={handleChange}
-                    required
-                    className="bg-card/50 border-border focus:border-purple-500 transition-colors duration-200"
-                  />
+                  <Input type="email" name="email" placeholder="Your Email" value={formData.email} onChange={handleChange} required className="bg-card/50 border-border focus:border-purple-500 transition-colors duration-200" />
                 </div>
               </div>
               
               <div>
-                <Input
-                  type="text"
-                  name="subject"
-                  placeholder="Subject"
-                  value={formData.subject}
-                  onChange={handleChange}
-                  required
-                  className="bg-card/50 border-border focus:border-purple-500 transition-colors duration-200"
-                />
+                <Input type="text" name="subject" placeholder="Subject" value={formData.subject} onChange={handleChange} required className="bg-card/50 border-border focus:border-purple-500 transition-colors duration-200" />
               </div>
               
               <div>
-                <Textarea
-                  name="message"
-                  placeholder="Your Message"
-                  value={formData.message}
-                  onChange={handleChange}
-                  required
-                  rows={6}
-                  className="bg-card/50 border-border focus:border-purple-500 transition-colors duration-200 resize-none"
-                />
+                <Textarea name="message" placeholder="Your Message" value={formData.message} onChange={handleChange} required rows={6} className="bg-card/50 border-border focus:border-purple-500 transition-colors duration-200 resize-none" />
               </div>
               
-              <Button
-                type="submit"
-                disabled={isSubmitting}
-                className="w-full bg-gradient-to-r from-purple-500 to-blue-500 hover:from-purple-600 hover:to-blue-600 text-white py-3 text-lg font-semibold transform hover:scale-105 transition-all duration-200 disabled:opacity-50 disabled:cursor-not-allowed disabled:transform-none"
-              >
+              <Button type="submit" disabled={isSubmitting} className="w-full bg-gradient-to-r from-purple-500 to-blue-500 hover:from-purple-600 hover:to-blue-600 text-white py-3 text-lg font-semibold transform hover:scale-105 transition-all duration-200 disabled:opacity-50 disabled:cursor-not-allowed disabled:transform-none">
                 {isSubmitting ? "Sending..." : "Send Message"}
               </Button>
             </form>
           </div>
         </div>
       </div>
-    </section>
-  );
+    </section>;
 };
-
 export default Contact;
