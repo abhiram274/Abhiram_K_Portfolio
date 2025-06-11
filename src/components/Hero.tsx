@@ -4,7 +4,7 @@ const Hero = () => {
   const [displayText, setDisplayText] = useState("");
   const [currentIndex, setCurrentIndex] = useState(0);
   const [isDeleting, setIsDeleting] = useState(false);
-  const titles = ["Web Developer", "Frontend Specialist", "UI/UX Enthusiast", "React Expert"];
+  const titles = ["Web App Developer", "AI & ML Enthusiast", "Tech Buddy", "Cloud Computing "];
   useEffect(() => {
     const currentTitle = titles[currentIndex];
     const timeout = setTimeout(() => {
