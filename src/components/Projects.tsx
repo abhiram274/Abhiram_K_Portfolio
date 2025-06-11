@@ -2,68 +2,130 @@
 import { Button } from "@/components/ui/button";
 
 const Projects = () => {
-  const projects = [
-    {
-      id: 1,
-      title: "E-Commerce Platform",
-      description: "A full-stack e-commerce solution built with React, Node.js, and PostgreSQL. Features include user authentication, payment processing, and admin dashboard.",
-      technologies: ["React", "Node.js", "PostgreSQL", "Stripe", "Tailwind CSS"],
-      image: "/placeholder.svg",
-      github: "#",
-      live: "#",
-      featured: true
-    },
-    {
-      id: 2,
-      title: "Task Management App",
-      description: "A collaborative task management application with real-time updates, drag-and-drop functionality, and team collaboration features.",
-      technologies: ["Next.js", "TypeScript", "Prisma", "Socket.io", "Framer Motion"],
-      image: "/placeholder.svg",
-      github: "#",
-      live: "#",
-      featured: true
-    },
-    {
-      id: 3,
-      title: "Weather Dashboard",
-      description: "A beautiful weather dashboard with detailed forecasts, interactive maps, and location-based recommendations.",
-      technologies: ["React", "Weather API", "Chart.js", "Geolocation"],
-      image: "/placeholder.svg",
-      github: "#",
-      live: "#",
-      featured: false
-    },
-    {
-      id: 4,
-      title: "Portfolio Website",
-      description: "A responsive portfolio website showcasing modern design principles and smooth animations.",
-      technologies: ["React", "Tailwind CSS", "Framer Motion", "TypeScript"],
-      image: "/placeholder.svg",
-      github: "#",
-      live: "#",
-      featured: false
-    },
-    {
-      id: 5,
-      title: "Social Media App",
-      description: "A social media platform with real-time messaging, photo sharing, and social features.",
-      technologies: ["React Native", "Firebase", "Redux", "Node.js"],
-      image: "/placeholder.svg",
-      github: "#",
-      live: "#",
-      featured: false
-    },
-    {
-      id: 6,
-      title: "AI Chat Bot",
-      description: "An intelligent chatbot powered by machine learning with natural language processing capabilities.",
-      technologies: ["Python", "TensorFlow", "React", "Flask", "NLP"],
-      image: "/placeholder.svg",
-      github: "#",
-      live: "#",
-      featured: false
-    }
-  ];
+const projects = [
+  {
+    id: 1,
+    title: "E-Commerce Platform",
+    description: "A full-stack e-commerce solution built with React, Node.js, and PostgreSQL. Features include user authentication, payment processing, and admin dashboard.",
+    technologies: ["React", "Node.js", "PostgreSQL", "Stripe", "Tailwind CSS"],
+    image: "/placeholder.svg",
+    github: "#",
+    live: "#",
+    featured: true
+  },
+  {
+    id: 2,
+    title: "Task Management App",
+    description: "A collaborative task management application with real-time updates, drag-and-drop functionality, and team collaboration features.",
+    technologies: ["Next.js", "TypeScript", "Prisma", "Socket.io", "Framer Motion"],
+    image: "/placeholder.svg",
+    github: "#",
+    live: "#",
+    featured: true
+  },
+  {
+    id: 3,
+    title: "AI Virtual Assistant",
+    description: "Designed and implemented a virtual assistant during my Diploma 3rd semester. Features include voice recognition, task automation, and basic AI capabilities.",
+    technologies: ["Python", "Speech Recognition", "NLP"],
+    image: "/images/ai-assistant.svg",
+    github: "#",
+    live: "#",
+    featured: false
+  },
+  {
+    id: 4,
+    title: "College Website Development",
+    description: "Developed a fully functional college website with front-end and back-end integration. Utilized HTML, CSS, JavaScript, SCSS, PHP, and SQL.",
+    technologies: ["HTML", "CSS", "JavaScript", "PHP", "SQL"],
+    image: "/images/college-website.svg",
+    github: "#",
+    live: "#",
+    featured: false
+  },
+  {
+    id: 5,
+    title: "Chatting Web Application",
+    description: "Created a real-time chatting web app with modern UI using React and Firebase. Implemented authentication, real-time messaging, and user-friendly interface.",
+    technologies: ["React", "Firebase", "JavaScript"],
+    image: "/images/chat-app.svg",
+    github: "#",
+    live: "#",
+    featured: false
+  },
+  {
+    id: 6,
+    title: "Management Systems",
+    description: "Developed various management systems like Internship and Website Management Systems. Focused on user accessibility, security, and automation.",
+    technologies: ["HTML", "CSS", "PHP", "MySQL"],
+    image: "/images/management-system.svg",
+    github: "#",
+    live: "#",
+    featured: false
+  },
+  {
+    id: 7,
+    title: "Readgro",
+    description: "Designed and deployed a Next.js-based web app for learning courses, referrals, and earning. Backend powered by Node.js with secure authentication.",
+    technologies: ["Next.js", "Node.js", "MongoDB", "Tailwind CSS"],
+    image: "/images/readgro.svg",
+    github: "https://github.com/abhiram274/ReadGro",
+    live: "https://www.readgro.com/",
+    featured: true
+  },
+  {
+    id: 8,
+    title: "Flutter-Based Mini Projects",
+    description: "Built applications like OTP Generator and To-Do List App using Flutter and Dart. Integrated Node.js for backend operations.",
+    technologies: ["Flutter", "Dart", "Node.js"],
+    image: "/images/flutter-mini.svg",
+    github: "#",
+    live: "#",
+    featured: false
+  },
+  {
+    id: 9,
+    title: "Community Web Application ",
+    description: "Community-based web app named MMK UNIVERSE allowing users to create events or programs for free and connect within the community.",
+    technologies: ["React", "Node.js", "MongoDB", "Tailwind CSS"],
+    image: "/images/community-app.svg",
+    github: "https://github.com/abhiram274/mmkuniverse-main",
+    live: "https://mmkuniverse-main.vercel.app/",
+    featured: true
+  },
+  {
+    id: 10,
+    title: "Weather Dashboard",
+    description: "A beautiful weather dashboard with detailed forecasts, interactive maps, and location-based recommendations.",
+    technologies: ["React", "Weather API", "Chart.js", "Geolocation"],
+    image: "/placeholder.svg",
+    github: "#",
+    live: "#",
+    featured: false
+  },
+  {
+    id: 11,
+    title: "Portfolio Website",
+    description: "A responsive portfolio website showcasing modern design principles and smooth animations.",
+    technologies: ["React", "Tailwind CSS", "Framer Motion", "TypeScript"],
+    image: "/placeholder.svg",
+    github: "#",
+    live: "#",
+    featured: false
+  },
+ 
+  {
+    id: 13,
+    title: "AI Chat Bot",
+    description: "An intelligent chatbot powered by machine learning with natural language processing capabilities.",
+    technologies: ["Python", "TensorFlow", "React", "Flask", "NLP"],
+    image: "/placeholder.svg",
+    github: "#",
+    live: "#",
+    featured: false
+  }
+];
+
 
   return (
     <section id="projects" className="py-20 bg-card/50">
