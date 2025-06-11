@@ -6,10 +6,10 @@ const projects = [
 
   {
     id: 3,
-    title: "AI Virtual Assistant",
-    description: "Designed and implemented a virtual assistant during my Diploma 3rd semester. Features include voice recognition, task automation, and basic AI capabilities.",
+    title: "Panda AI Virtual Assistant",
+description: "Implemented core machine learning algorithms and real-world projects such as linear regression for house price prediction, heart disease classification, and face recognition. Focused on model accuracy, data preprocessing, and practical ML applications.",
     technologies: ["Python", "Speech Recognition", "NLP"],
-    image: "/images/ai-assistant.svg",
+    image: "/lovable-uploads/.svg",
     github: "#",
     live: "#",
     featured: false
