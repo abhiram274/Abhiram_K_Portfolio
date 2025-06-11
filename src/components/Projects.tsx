@@ -4,19 +4,9 @@ import { Button } from "@/components/ui/button";
 const Projects = () => {
 const projects = [
 
+
   {
     id: 3,
-    title: "Panda AI Virtual Assistant",
-description: "Implemented core machine learning algorithms and real-world projects such as linear regression for house price prediction, heart disease classification, and face recognition. Focused on model accuracy, data preprocessing, and practical ML applications.",
-    technologies: ["Python", "Speech Recognition", "NLP"],
-    image: "/lovable-uploads/.svg",
-    github: "#",
-    live: "#",
-    featured: false
-  },
-  
-  {
-    id: 4,
     title: "College Website Development",
     description: "Developed a fully functional college website with front-end and back-end integration. Utilized HTML, CSS, JavaScript, SCSS, PHP, and SQL.",
     technologies: ["HTML", "CSS", "JavaScript", "PHP", "SQL"],
@@ -27,7 +17,7 @@ description: "Implemented core machine learning algorithms and real-world projec
   },
 
   {
-    id: 5,
+    id: 4,
     title: "Chatting Web Application",
     description: "Created a real-time chatting web app with modern UI using React and Firebase. Implemented authentication, real-time messaging, and user-friendly interface.",
     technologies: ["React", "Firebase", "JavaScript"],
@@ -36,6 +26,18 @@ description: "Implemented core machine learning algorithms and real-world projec
     live: "#",
     featured: false
   },
+
+    {
+    id: 5,
+    title: "Panda AI Virtual Assistant",
+description: "Implemented core machine learning algorithms and real-world projects such as linear regression for house price prediction, heart disease classification, and face recognition. Focused on model accuracy, data preprocessing, and practical ML applications.",
+    technologies: ["Python", "Speech Recognition", "NLP"],
+    image: "/lovable-uploads/panda-ai.png",
+    github: "#",
+    live: "#",
+    featured: false
+  },
+  
 
   {
     id: 6,
