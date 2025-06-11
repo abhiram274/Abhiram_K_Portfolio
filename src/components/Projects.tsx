@@ -42,7 +42,7 @@ const projects = [
     title: "Machine Learning Concepts",
     description: "Developed various management systems like Internship and Website Management Systems. Focused on user accessibility, security, and automation.",
     technologies: ["HTML", "CSS", "PHP", "MySQL"],
-    image: "/lovable-uploads/machine-learning.jpg",
+    image: "./public/lovable-uploads/machine-learning.jpg",
     github: "https://github.com/abhiram274/MachineLearning_concepts",
     live: "",
     featured: false
