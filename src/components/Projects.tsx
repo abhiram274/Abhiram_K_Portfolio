@@ -44,7 +44,7 @@ const projects = [
     title: "Community Web Application ",
     description: "Community-based web app named MMK UNIVERSE allowing users to create events or programs for free and connect within the community.",
     technologies: ["React", "Node.js", "MongoDB", "Tailwind CSS"],
-    image: "/images/community-app.png",
+    image: "/loveable-uploads/community-app.png",
     github: "https://github.com/abhiram274/mmkuniverse-main",
     live: "https://mmkuniverse-main.vercel.app/",
     featured: true
