@@ -136,9 +136,24 @@ const Hero = () => {
                       <div className="border border-border rounded-lg p-4">
                         <h3 className="text-lg font-semibold mb-2">Certifications</h3>
                         <div className="bg-gradient-to-r from-purple-500/10 to-blue-500/10 p-3 rounded">
+                          <h4 className="font-medium">Web Developer Intern Certificate</h4>
+                          <p className="text-sm text-muted-foreground mt-1">
+                             Web development internship certificate at VBS 
+                          </p>
+                        </div>
+
+                        
+                        <div className="bg-gradient-to-r from-purple-500/10 to-blue-500/10 p-3 rounded">
+                          <h4 className="font-medium">Machine Learning Internship</h4>
+                          <p className="text-sm text-muted-foreground mt-1">
+                             Machine Learning Internship certificate for developing the AI & ML models from Skilldzire
+                          </p>
+                        </div>
+                        
+                        <div className="bg-gradient-to-r from-purple-500/10 to-blue-500/10 p-3 rounded">
                           <h4 className="font-medium">Cyber Security Workshop</h4>
                           <p className="text-sm text-muted-foreground mt-1">
-                            Participated in an intensive cybersecurity workshop covering ethical hacking, security breaches, and data protection. Secured 2nd place in the Mini Hackathon.
+                            Participated in an intensive cybersecurity workshop covering ethical hacking, security breaches, and data protection.
                           </p>
                         </div>
                       </div>
