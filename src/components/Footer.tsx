@@ -15,27 +15,31 @@ const Footer = () => {
           
           {/* Quick Links */}
           <div className="text-center">
-            <h4 className="font-semibold text-foreground mb-4">Quick Links</h4>
-            <div className="space-y-2">
+            <h4 className="font-semibold text-foreground mb-6">Quick Navigation</h4>
+            <div className="grid grid-cols-2 gap-3">
               <button onClick={() => document.querySelector('#home')?.scrollIntoView({
                 behavior: 'smooth'
-              })} className="block mx-auto text-muted-foreground hover:text-purple-400 transition-colors duration-200">
-                Home
+              })} className="group relative overflow-hidden bg-gradient-to-r from-purple-500/10 to-blue-500/10 border border-purple-500/20 rounded-lg px-4 py-3 text-sm font-medium text-foreground hover:bg-gradient-to-r hover:from-purple-500/20 hover:to-blue-500/20 transition-all duration-300 hover:scale-105 hover:shadow-lg hover:shadow-purple-500/25">
+                <span className="relative z-10">Home</span>
+                <div className="absolute inset-0 bg-gradient-to-r from-purple-500/0 to-blue-500/0 group-hover:from-purple-500/10 group-hover:to-blue-500/10 transition-all duration-300"></div>
               </button>
               <button onClick={() => document.querySelector('#about')?.scrollIntoView({
                 behavior: 'smooth'
-              })} className="block mx-auto text-muted-foreground hover:text-purple-400 transition-colors duration-200">
-                About
+              })} className="group relative overflow-hidden bg-gradient-to-r from-blue-500/10 to-purple-500/10 border border-blue-500/20 rounded-lg px-4 py-3 text-sm font-medium text-foreground hover:bg-gradient-to-r hover:from-blue-500/20 hover:to-purple-500/20 transition-all duration-300 hover:scale-105 hover:shadow-lg hover:shadow-blue-500/25">
+                <span className="relative z-10">About</span>
+                <div className="absolute inset-0 bg-gradient-to-r from-blue-500/0 to-purple-500/0 group-hover:from-blue-500/10 group-hover:to-purple-500/10 transition-all duration-300"></div>
               </button>
               <button onClick={() => document.querySelector('#projects')?.scrollIntoView({
                 behavior: 'smooth'
-              })} className="block mx-auto text-muted-foreground hover:text-purple-400 transition-colors duration-200">
-                Projects
+              })} className="group relative overflow-hidden bg-gradient-to-r from-purple-500/10 to-blue-500/10 border border-purple-500/20 rounded-lg px-4 py-3 text-sm font-medium text-foreground hover:bg-gradient-to-r hover:from-purple-500/20 hover:to-blue-500/20 transition-all duration-300 hover:scale-105 hover:shadow-lg hover:shadow-purple-500/25">
+                <span className="relative z-10">Projects</span>
+                <div className="absolute inset-0 bg-gradient-to-r from-purple-500/0 to-blue-500/0 group-hover:from-purple-500/10 group-hover:to-blue-500/10 transition-all duration-300"></div>
               </button>
               <button onClick={() => document.querySelector('#contact')?.scrollIntoView({
                 behavior: 'smooth'
-              })} className="block mx-auto text-muted-foreground hover:text-purple-400 transition-colors duration-200">
-                Contact
+              })} className="group relative overflow-hidden bg-gradient-to-r from-blue-500/10 to-purple-500/10 border border-blue-500/20 rounded-lg px-4 py-3 text-sm font-medium text-foreground hover:bg-gradient-to-r hover:from-blue-500/20 hover:to-purple-500/20 transition-all duration-300 hover:scale-105 hover:shadow-lg hover:shadow-blue-500/25">
+                <span className="relative z-10">Contact</span>
+                <div className="absolute inset-0 bg-gradient-to-r from-blue-500/0 to-purple-500/0 group-hover:from-blue-500/10 group-hover:to-purple-500/10 transition-all duration-300"></div>
               </button>
             </div>
           </div>
@@ -54,7 +58,6 @@ const Footer = () => {
                 <Github className="w-5 h-5" />
               </a>
               <a 
-                {/*https://www.linkedin.com/in/abhiram-kosuru-7974b6231/ */}
                 href="https://linkedin.com/in/abhiram-kosuru-7974b6231/" 
                 target="_blank" 
                 rel="noopener noreferrer"

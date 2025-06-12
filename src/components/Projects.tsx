@@ -1,6 +1,21 @@
 import { Button } from "@/components/ui/button";
+import { useToast } from "@/hooks/use-toast";
 
 const Projects = () => {
+  const { toast } = useToast();
+
+  const handleProjectClick = (url: string, type: 'github' | 'live', projectTitle: string) => {
+    if (url === "#" || url === "") {
+      toast({
+        title: "Project Details",
+        description: `This ${type === 'github' ? 'GitHub repository' : 'live demo'} for "${projectTitle}" is currently not available for public viewing.`,
+        duration: 3000,
+      });
+      return;
+    }
+    window.open(url, '_blank');
+  };
+
 const projects = [
   {
     id: 1,
@@ -146,14 +161,14 @@ description: "Implemented core machine learning algorithms and real-world projec
                       variant="outline" 
                       size="sm" 
                       className="flex-1 border-purple-500/50 text-purple-400 hover:bg-purple-500/10"
-                      onClick={() => window.open(project.github, '_blank')}
+                      onClick={() => handleProjectClick(project.github, 'github', project.title)}
                     >
                       GitHub
                     </Button>
                     <Button 
                       size="sm" 
                       className="flex-1 bg-gradient-to-r from-purple-500 to-blue-500 hover:from-purple-600 hover:to-blue-600 text-white"
-                      onClick={() => window.open(project.live, '_blank')}
+                      onClick={() => handleProjectClick(project.live, 'live', project.title)}
                     >
                       Live Demo
                     </Button>
