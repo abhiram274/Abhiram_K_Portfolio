@@ -43,7 +43,12 @@ const AIChatbot = () => {
         "Hello! Great to meet you! 😊 What would you like to know about my work or experience?",
         "Hey! Thanks for stopping by my portfolio! How can I help you today?",
         "Hi there! I'm excited to chat with you. What brings you to my portfolio today?",
-        "Hello! Welcome to my digital space! Feel free to ask me anything about my projects or journey."
+        "Hello! Welcome to my digital space! Feel free to ask me anything about my projects or journey.",
+            "Hello! 👋 Glad you're here. What would you like to explore — my projects, skills, or experience?",
+      "Hey! Welcome to my portfolio — feel free to ask me anything!",
+      "Hi there! 😊 Curious about my AI/ML projects or web development work?",
+      "Great to see you! What would you like to know about me?"
+
       ];
       return greetings[Math.floor(Math.random() * greetings.length)];
     }
@@ -54,14 +59,18 @@ const AIChatbot = () => {
     }
     
     // Skills related
-    if (message.includes('skill') || message.includes('technology') || message.includes('programming') || message.includes('languages')) {
-      return "I work with a variety of technologies! My main programming languages are Python, C++, Java, JavaScript, and Dart. I'm really comfortable with React, Node.js, Next.js for web development, and I use Firebase, MySQL, and MongoDB for databases. I'm also passionate about AI/ML and have hands-on experience with Flutter for mobile development! What specific technology interests you? 💻";
-    }
+  // Skills
+  if (message.includes('skill') || message.includes('technology') || message.includes('programming')) {
+    return "I’m skilled in Python, C++, Java, JavaScript, Designing (UI/UX),Dart and few more. I use React, Node.js, and Next.js for web development, and build mobile apps using Flutter. Databases I work with include Firebase, MySQL, and MongoDB. I'm also comfortable with SCSS and PHP. 💻";
+  }
+
     
     // Projects
     if (message.includes('project') || message.includes('work') || message.includes('built') || message.includes('portfolio')) {
       return "I've worked on some exciting projects! My favorites include ReadGro (a learning platform), an AI Virtual Assistant built with Python, real-time chat applications with React and Firebase, and various Flutter mobile apps. I've also developed college management systems and freelancing platforms. Each project taught me something new! Which one would you like to hear more about? 🎯";
     }
+
+
     
     // Education
     if (message.includes('education') || message.includes('study') || message.includes('college') || message.includes('degree') || message.includes('university')) {
