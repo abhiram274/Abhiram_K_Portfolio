@@ -1,10 +1,7 @@
-
 import { Button } from "@/components/ui/button";
 
 const Projects = () => {
 const projects = [
-
-  
   {
     id: 1,
     title: "Machine Learning Concepts",
@@ -27,7 +24,6 @@ const projects = [
     featured: true
   },
 
-
   {
     id: 3,
     title: "College Website Development",
@@ -44,14 +40,12 @@ const projects = [
     title: "Community Web Application ",
     description: "Community-based web app named MMK UNIVERSE allowing users to create events or programs for free and connect within the community.",
     technologies: ["React","Cloudinary","Type Script", "Node.js", "MySQL", "Tailwind CSS"],
-    image: "/community-app.png",
+    image: "/lovable-uploads/community-app.png",
     github: "https://github.com/abhiram274/mmkuniverse-main",
     live: "https://mmkuniverse-main.vercel.app/",
     featured: false
   },
 
-
-  
   {
     id: 5,
     title: "Chatting Web Application",
@@ -73,21 +67,17 @@ description: "Implemented core machine learning algorithms and real-world projec
     live: "#",
     featured: false
   },
-  
-
-
 
   {
     id: 7,
     title: "Flutter-Based Mini Projects",
     description: "Built applications like OTP Generator and To-Do List App using Flutter and Dart. Integrated Node.js for backend operations.",
     technologies: ["Flutter", "MongoDB", "Node.js"],
-    image: "/flutter-apps.jpg",
+    image: "/lovable-uploads/flutter-apps.jpg",
     github: "#",
     live: "#",
     featured: false
   },
-
 
   {
     id: 8,
@@ -99,10 +89,7 @@ description: "Implemented core machine learning algorithms and real-world projec
     live: "",
     featured: false
   },
- 
-
 ];
-
 
   return (
     <section id="projects" className="py-20 bg-card/50">
