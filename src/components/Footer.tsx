@@ -75,7 +75,7 @@ const Footer = () => {
         
         <div className="border-t border-border mt-12 pt-8 text-center">
           <p className="text-muted-foreground">
-            © {currentYear} Abhiram Kosuru. All rights reserved. Built with ❤️ using React and Tailwind CSS.
+            © {currentYear} Abhiram Kosuru. All rights reserved. Built with Passion using React and Tailwind CSS.
           </p>
         </div>
       </div>
