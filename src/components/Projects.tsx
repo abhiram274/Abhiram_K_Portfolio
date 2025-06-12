@@ -85,7 +85,7 @@ description: "Implemented core machine learning algorithms and real-world projec
     description: "A responsive portfolio website showcasing modern design principles and smooth animations.",
     technologies: ["React", "Tailwind CSS", "Framer Motion", "TypeScript"],
     image: "/abhi-portfolio.png",
-    github: "",
+    github: "https://github.com/abhiram274/Abhiram_K_Portfolio",
     live: "",
     featured: false
   },
