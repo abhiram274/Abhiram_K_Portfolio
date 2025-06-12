@@ -54,7 +54,8 @@ const Footer = () => {
                 <Github className="w-5 h-5" />
               </a>
               <a 
-                href="https://linkedin.com/in/abhiram-kosuru" 
+                {/*https://www.linkedin.com/in/abhiram-kosuru-7974b6231/ */}
+                href="https://linkedin.com/in/abhiram-kosuru-7974b6231/" 
                 target="_blank" 
                 rel="noopener noreferrer"
                 className="w-10 h-10 bg-gradient-to-r from-purple-500 to-blue-500 rounded-full flex items-center justify-center text-white hover:scale-110 transition-transform duration-200" 
