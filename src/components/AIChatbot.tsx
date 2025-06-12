@@ -17,7 +17,7 @@ const AIChatbot = () => {
   const [messages, setMessages] = useState<Message[]>([
     {
       id: '1',
-      text: "Hi! I'm Abhiram's AI assistant. I can help you learn more about his skills, projects, and experience. Feel free to ask me anything!",
+      text: "Hey there! 👋 I'm Abhiram Kosuru. Thanks for visiting my portfolio! Feel free to ask me anything about my work, skills, or projects. I'm here to chat!",
       isUser: false,
       timestamp: new Date()
     }
@@ -38,74 +38,100 @@ const AIChatbot = () => {
     const message = userMessage.toLowerCase();
     
     // Greetings
-    if (message.includes('hello') || message.includes('hi') || message.includes('hey')) {
-      return "Hello! Nice to meet you! I'm here to help you learn more about Abhiram. What would you like to know?";
+    if (message.includes('hello') || message.includes('hi') || message.includes('hey') || message.includes('hii')) {
+      const greetings = [
+        "Hello! Great to meet you! 😊 What would you like to know about my work or experience?",
+        "Hey! Thanks for stopping by my portfolio! How can I help you today?",
+        "Hi there! I'm excited to chat with you. What brings you to my portfolio today?",
+        "Hello! Welcome to my digital space! Feel free to ask me anything about my projects or journey."
+      ];
+      return greetings[Math.floor(Math.random() * greetings.length)];
+    }
+    
+    // About me / Who are you
+    if (message.includes('who are you') || message.includes('about you') || message.includes('tell me about yourself')) {
+      return "I'm Abhiram Kosuru, a passionate Computer Science student specializing in AI & ML at Anil Neerukonda Institute of Technology. I love building web applications, exploring AI technologies, and creating solutions that make a difference. When I'm not coding, you'll find me watching sci-fi movies or learning about space technology! 🚀";
     }
     
     // Skills related
-    if (message.includes('skill') || message.includes('technology') || message.includes('programming')) {
-      return "Abhiram is skilled in Python, C++, Java, JavaScript, and Dart. He works with React, Node.js, Next.js, Firebase, MySQL, and MongoDB. He's also experienced in AI/ML, web development, and mobile app development with Flutter!";
+    if (message.includes('skill') || message.includes('technology') || message.includes('programming') || message.includes('languages')) {
+      return "I work with a variety of technologies! My main programming languages are Python, C++, Java, JavaScript, and Dart. I'm really comfortable with React, Node.js, Next.js for web development, and I use Firebase, MySQL, and MongoDB for databases. I'm also passionate about AI/ML and have hands-on experience with Flutter for mobile development! What specific technology interests you? 💻";
     }
     
     // Projects
-    if (message.includes('project') || message.includes('work') || message.includes('built')) {
-      return "Abhiram has worked on some amazing projects! He built ReadGro (a learning platform), an AI Virtual Assistant, community web apps, real-time chat applications, and Flutter mobile apps. He's also developed college websites and management systems. Would you like to know more about any specific project?";
+    if (message.includes('project') || message.includes('work') || message.includes('built') || message.includes('portfolio')) {
+      return "I've worked on some exciting projects! My favorites include ReadGro (a learning platform), an AI Virtual Assistant built with Python, real-time chat applications with React and Firebase, and various Flutter mobile apps. I've also developed college management systems and freelancing platforms. Each project taught me something new! Which one would you like to hear more about? 🎯";
     }
     
     // Education
-    if (message.includes('education') || message.includes('study') || message.includes('college') || message.includes('degree')) {
-      return "Abhiram is currently pursuing his Bachelor of Technology in Computer Science and Engineering with a specialization in AI & ML at Anil Neerukonda Institute of Technology and Sciences. He also completed his Diploma in Computer Engineering from Government Polytechnic College, Rebaka.";
+    if (message.includes('education') || message.includes('study') || message.includes('college') || message.includes('degree') || message.includes('university')) {
+      return "I'm currently pursuing my B.Tech in Computer Science and Engineering with AI & ML specialization at Anil Neerukonda Institute of Technology and Sciences. Before this, I completed my Diploma in Computer Engineering from Government Polytechnic College, Rebaka. The journey has been amazing so far! 🎓";
     }
     
     // Experience
-    if (message.includes('experience') || message.includes('work') || message.includes('job') || message.includes('intern')) {
-      return "Abhiram worked as a Web Developer Intern at VBS Business Solutions for 6 months, where he developed and optimized web applications, enhanced UI/UX, and gained valuable experience in full-stack development and teamwork.";
+    if (message.includes('experience') || message.includes('intern') || message.includes('job') || message.includes('work experience')) {
+      return "I had an incredible 6-month internship as a Web Developer at VBS Business Solutions! It was such a learning experience - I worked on developing and optimizing web applications, improved UI/UX designs, and really honed my teamwork and project management skills. The hands-on experience in full-stack development was invaluable! 💼";
     }
     
     // Contact/Hire
-    if (message.includes('contact') || message.includes('hire') || message.includes('email') || message.includes('reach')) {
-      return "You can reach out to Abhiram through the contact form on this website, or connect with him on LinkedIn or GitHub. He's always open to discussing new opportunities and interesting projects!";
+    if (message.includes('contact') || message.includes('hire') || message.includes('email') || message.includes('reach') || message.includes('collaborate')) {
+      return "I'd love to connect with you! You can reach me through the contact form on this website, or find me on LinkedIn and GitHub. I'm always excited about new opportunities and interesting collaborations. Let's build something amazing together! 🤝";
     }
     
     // AI/ML specific
     if (message.includes('ai') || message.includes('machine learning') || message.includes('ml') || message.includes('artificial intelligence')) {
-      return "Abhiram is passionate about AI & ML! He's currently specializing in it during his B.Tech and has worked on various ML projects including linear regression for house price prediction, heart disease classification, and face recognition systems.";
+      return "AI & ML is my passion! 🤖 I'm specializing in it during my B.Tech and have worked on projects like linear regression for house price prediction, heart disease classification, and face recognition systems. I built an AI Virtual Assistant during my diploma too! The field is evolving so fast and I love being part of it!";
     }
     
-    // Hobbies
-    if (message.includes('hobby') || message.includes('hobbies') || message.includes('interest') || message.includes('free time')) {
-      return "Abhiram loves watching sci-fi movies, learning about space and galaxies, reading about rockets and aerospace technology, listening to music, and spending time with nature and farm animals!";
+    // Hobbies/Personal
+    if (message.includes('hobby') || message.includes('hobbies') || message.includes('interest') || message.includes('free time') || message.includes('personal')) {
+      return "When I'm not coding, I'm probably watching sci-fi movies (I'm a huge space nerd! 🌌), reading about rockets and aerospace technology, or just enjoying music. I also love spending time in nature and taking care of farm animals - it keeps me grounded and inspired!";
     }
     
     // Specific technologies
     if (message.includes('react') || message.includes('javascript') || message.includes('node')) {
-      return "Yes! Abhiram is proficient in React and has built several web applications using it, including real-time chat apps and community platforms. He also works with Node.js for backend development.";
+      return "React is one of my favorite frameworks! I've built several applications with it, including real-time chat apps and community platforms. Combined with Node.js for the backend, it's such a powerful stack. The component-based architecture makes development so much more enjoyable! ⚛️";
     }
     
     if (message.includes('python')) {
-      return "Absolutely! Python is one of Abhiram's favorite languages. He's used it for AI/ML projects, building virtual assistants, and implementing various algorithms for machine learning applications.";
+      return "Python is my go-to language for AI/ML projects! I used it to build my AI Virtual Assistant and implement various machine learning algorithms. It's so versatile - from web scraping to data analysis to building neural networks. What Python projects are you working on? 🐍";
     }
     
-    if (message.includes('flutter') || message.includes('mobile')) {
-      return "Abhiram has experience with Flutter and Dart for mobile app development. He's built applications like OTP generators and To-Do list apps, integrating them with Node.js backends.";
+    if (message.includes('flutter') || message.includes('mobile') || message.includes('app')) {
+      return "Flutter is amazing for mobile development! I've built apps like OTP generators and To-Do list applications with it. The fact that you can write once and deploy to both Android and iOS is incredible. Plus, integrating it with Node.js backends makes for really robust mobile solutions! 📱";
     }
     
     // Location/Availability
-    if (message.includes('available') || message.includes('location') || message.includes('where')) {
-      return "Abhiram is currently based in India and is available for both remote and local opportunities. He's always excited to work on innovative projects!";
+    if (message.includes('available') || message.includes('location') || message.includes('where') || message.includes('from')) {
+      return "I'm based in India and I'm definitely available for both remote and local opportunities! I love working with teams from different parts of the world - it brings such diverse perspectives to projects. Are you working on something interesting? 🌍";
+    }
+    
+    // Learning/Growth
+    if (message.includes('learn') || message.includes('future') || message.includes('goals') || message.includes('next')) {
+      return "I'm always learning! Currently diving deeper into advanced AI/ML concepts, exploring cloud technologies, and keeping up with the latest in web development. My goal is to work on projects that can make a real impact on people's lives. What new technologies are you excited about? 📚";
+    }
+    
+    // Fun questions
+    if (message.includes('favorite') || message.includes('best') || message.includes('like most')) {
+      return "That's a tough one! I'd say my favorite project so far was the AI Virtual Assistant because it combined so many different technologies and really challenged me. But honestly, I love every project I work on because each one teaches me something new! What's your favorite type of project to work on? 🤔";
     }
     
     // Thank you
-    if (message.includes('thank') || message.includes('thanks')) {
-      return "You're welcome! I'm glad I could help. If you have any more questions about Abhiram or would like to get in touch with him, feel free to ask!";
+    if (message.includes('thank') || message.includes('thanks') || message.includes('awesome') || message.includes('great')) {
+      return "You're so welcome! I really appreciate you taking the time to chat with me. It means a lot! If you have any other questions or just want to talk tech, I'm here. Thanks for checking out my portfolio! 😊";
     }
     
-    // Default responses
+    // Advice/Tips
+    if (message.includes('advice') || message.includes('tip') || message.includes('suggest') || message.includes('recommend')) {
+      return "My best advice? Never stop building! Whether it's a small script or a full-scale application, every project teaches you something valuable. Also, don't be afraid to experiment with new technologies - some of my best learning experiences came from stepping out of my comfort zone. What are you working on currently? 💡";
+    }
+    
+    // Default responses for unmatched queries
     const defaultResponses = [
-      "That's an interesting question! You can learn more about Abhiram by exploring his projects, skills, and experience on this website. Is there something specific you'd like to know?",
-      "I'd love to help you learn more about Abhiram! You can ask me about his skills, projects, education, or experience. What interests you most?",
-      "Abhiram is a talented developer with expertise in web development, AI/ML, and mobile apps. What would you like to know about his work?",
-      "Feel free to ask me about Abhiram's technical skills, projects, education, or any other questions you might have!"
+      "That's an interesting question! I'd love to help you with that. Could you tell me more about what specifically you'd like to know? I'm here to chat about anything related to my work, skills, or experience! 🤗",
+      "I'm not sure I caught that exactly, but I'm here to help! Feel free to ask me about my projects, technical skills, education, or anything else you're curious about. What would you like to know? 😊",
+      "Hmm, let me think about that! I'm always happy to discuss my development journey, the technologies I work with, or any projects that might interest you. What aspect would you like to explore? 🚀",
+      "Great question! I love chatting about technology, development, and my projects. Is there something specific about my background or work that you'd like to know more about? I'm all ears! 👂"
     ];
     
     return defaultResponses[Math.floor(Math.random() * defaultResponses.length)];
@@ -125,7 +151,7 @@ const AIChatbot = () => {
     setInputValue("");
     setIsTyping(true);
 
-    // Simulate typing delay
+    // Simulate more natural typing delay
     setTimeout(() => {
       const botResponse: Message = {
         id: (Date.now() + 1).toString(),
@@ -136,7 +162,7 @@ const AIChatbot = () => {
       
       setMessages(prev => [...prev, botResponse]);
       setIsTyping(false);
-    }, 1000 + Math.random() * 1000); // Random delay between 1-2 seconds
+    }, 1500 + Math.random() * 1000); // Random delay between 1.5-2.5 seconds
   };
 
   const handleKeyPress = (e: React.KeyboardEvent) => {
@@ -164,7 +190,7 @@ const AIChatbot = () => {
           <div className="flex items-center justify-between p-4 bg-gradient-to-r from-purple-500 to-blue-500 text-white rounded-t-lg">
             <div className="flex items-center gap-2">
               <Bot className="w-5 h-5" />
-              <span className="font-semibold">AI Assistant</span>
+              <span className="font-semibold">Chat with Abhiram</span>
             </div>
             <Button
               variant="ghost"
@@ -185,8 +211,8 @@ const AIChatbot = () => {
                   className={`flex ${message.isUser ? 'justify-end' : 'justify-start'} gap-2`}
                 >
                   {!message.isUser && (
-                    <div className="w-8 h-8 bg-gradient-to-r from-purple-500 to-blue-500 rounded-full flex items-center justify-center">
-                      <Bot className="w-4 h-4 text-white" />
+                    <div className="w-8 h-8 bg-gradient-to-r from-purple-500 to-blue-500 rounded-full flex items-center justify-center text-sm font-bold text-white">
+                      AK
                     </div>
                   )}
                   <div
@@ -208,8 +234,8 @@ const AIChatbot = () => {
               
               {isTyping && (
                 <div className="flex justify-start gap-2">
-                  <div className="w-8 h-8 bg-gradient-to-r from-purple-500 to-blue-500 rounded-full flex items-center justify-center">
-                    <Bot className="w-4 h-4 text-white" />
+                  <div className="w-8 h-8 bg-gradient-to-r from-purple-500 to-blue-500 rounded-full flex items-center justify-center text-sm font-bold text-white">
+                    AK
                   </div>
                   <div className="bg-muted p-3 rounded-lg">
                     <div className="flex space-x-1">
@@ -231,7 +257,7 @@ const AIChatbot = () => {
                 value={inputValue}
                 onChange={(e) => setInputValue(e.target.value)}
                 onKeyPress={handleKeyPress}
-                placeholder="Ask me anything about Abhiram..."
+                placeholder="Type your message..."
                 className="flex-1"
               />
               <Button
