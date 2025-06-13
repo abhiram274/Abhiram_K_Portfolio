@@ -1,4 +1,3 @@
-
 import { Card, CardContent, CardHeader } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
@@ -58,57 +57,83 @@ const Team = () => {
           </p>
         </div>
 
-{/*         <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 max-w-6xl mx-auto"> */}
-        <div className="grid grid-cols-1 sm:grid-cols-3 lg:grid-cols-3 gap-10 max-w-5xl mx-auto">
-
+        <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 max-w-6xl mx-auto">
           {teamMembers.map((member) => (
-            <Card
-  key={member.id}
-  className="flex flex-col items-center text-center p-6 shadow-md border border-gray-200 rounded-lg bg-white hover:shadow-lg transition duration-300"
->
-  <Avatar className="w-28 h-28 mb-4">
-    <AvatarImage src={member.image} alt={member.name} className="rounded-full object-cover" />
-    <AvatarFallback className="bg-gray-200 text-gray-600">
-      {member.name.split(' ').map(n => n[0]).join('')}
-    </AvatarFallback>
-  </Avatar>
-
-  <h3 className="text-lg font-semibold text-gray-900">{member.name}</h3>
-  <p className="text-sm text-purple-500 font-medium">{member.role}</p>
-
-  <p className="text-sm text-gray-600 mt-3">
-    {member.description}
-  </p>
-
-  <div className="flex gap-4 mt-4">
-    {member.github && (
-      <a href={member.github} target="_blank" rel="noopener noreferrer">
-        <Github className="w-5 h-5 text-gray-500 hover:text-gray-900 transition" />
-      </a>
-    )}
-    {member.linkedin && (
-      <a href={member.linkedin} target="_blank" rel="noopener noreferrer">
-        <Linkedin className="w-5 h-5 text-gray-500 hover:text-blue-700 transition" />
-      </a>
-    )}
-    <a href={`mailto:${member.email}`}>
-      <Mail className="w-5 h-5 text-gray-500 hover:text-green-600 transition" />
-    </a>
-  </div>
-                {member.portfolio !== "#" && (
-    <Button
-      variant="outline"
-      size="sm"
-      className="mt-4 border-purple-500 text-purple-600 hover:bg-purple-50 transition"
-      onClick={() => window.open(member.portfolio, '_blank')}
-    >
-      <ExternalLink className="w-4 h-4 mr-2" />
-      Portfolio
-    </Button>
-  )}
-
-</Card>
-
+            <Card key={member.id} className="group hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2 bg-gradient-to-br from-card via-card to-accent/5 border-2 hover:border-purple-500/20">
+              <CardHeader className="text-center pb-4">
+                <div className="relative mx-auto mb-4">
+                  <Avatar className="w-24 h-24 border-4 border-purple-500/20 group-hover:border-purple-500/40 transition-all duration-300">
+                    <AvatarImage src={member.image} alt={member.name} />
+                    <AvatarFallback className="text-xl font-bold bg-gradient-to-br from-purple-500 to-blue-500 text-white">
+                      {member.name.split(' ').map(n => n[0]).join('')}
+                    </AvatarFallback>
+                  </Avatar>
+                  <div className="absolute -bottom-2 -right-2 w-6 h-6 bg-green-500 rounded-full border-2 border-background animate-pulse"></div>
+                </div>
+                <h3 className="text-xl font-bold text-foreground group-hover:text-purple-400 transition-colors">
+                  {member.name}
+                </h3>
+                <p className="text-sm font-medium text-purple-400 mb-2">{member.role}</p>
+              </CardHeader>
+              
+              <CardContent className="space-y-4">
+                <p className="text-sm text-muted-foreground leading-relaxed">
+                  {member.description}
+                </p>
+                
+                <div className="space-y-3">
+                  <div>
+                    <h4 className="text-sm font-semibold text-foreground mb-2">Skills:</h4>
+                    <div className="flex flex-wrap gap-2">
+                      {member.skills.map((skill, index) => (
+                        <span key={index} className="px-2 py-1 text-xs bg-gradient-to-r from-purple-500/10 to-blue-500/10 text-purple-400 rounded-full border border-purple-500/20">
+                          {skill}
+                        </span>
+                      ))}
+                    </div>
+                  </div>
+                  
+                  <div className="flex flex-col gap-2 pt-2">
+                    <Button 
+                      variant="outline" 
+                      size="sm" 
+                      className="w-full bg-gradient-to-r from-purple-500 to-blue-500 hover:from-purple-600 hover:to-blue-600 text-white border-none"
+                      onClick={() => window.open(member.portfolio, '_blank')}
+                    >
+                      <ExternalLink className="w-4 h-4 mr-2" />
+                      Visit Portfolio
+                    </Button>
+                    
+                    <div className="flex gap-2">
+                      <Button 
+                        variant="outline" 
+                        size="sm" 
+                        className="flex-1 hover:bg-purple-500/10 hover:border-purple-500/20"
+                        onClick={() => window.open(member.github, '_blank')}
+                      >
+                        <Github className="w-4 h-4" />
+                      </Button>
+                      <Button 
+                        variant="outline" 
+                        size="sm" 
+                        className="flex-1 hover:bg-blue-500/10 hover:border-blue-500/20"
+                        onClick={() => window.open(member.linkedin, '_blank')}
+                      >
+                        <Linkedin className="w-4 h-4" />
+                      </Button>
+                      <Button 
+                        variant="outline" 
+                        size="sm" 
+                        className="flex-1 hover:bg-green-500/10 hover:border-green-500/20"
+                        onClick={() => window.open(mailto:${member.email}, '_blank')}
+                      >
+                        <Mail className="w-4 h-4" />
+                      </Button>
+                    </div>
+                  </div>
+                </div>
+              </CardContent>
+            </Card>
           ))}
         </div>
         
