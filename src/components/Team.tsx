@@ -9,10 +9,10 @@ const Team = () => {
     {
       id: 1,
       name: "Abhiram Kosuru",
-      role: "Full Stack Developer & Team Lead",
+      role: "Full Stack Developer",
       image: "/lovable-uploads/713fa653-0787-4be4-abac-21c4f5038add.png",
       portfolio: "https://abhiram-portfolio-six.vercel.app/",
-      description: "Passionate full-stack developer specializing in AI/ML and modern web technologies. Leading innovative projects with cutting-edge solutions.",
+      description: "Passionate full-stack developer specializing in AI/ML and modern web technologies. Building innovative projects with cutting-edge solutions.",
       skills: ["React", "Node.js", "Python", "AI/ML", "TypeScript"],
       github: "https://github.com/abhiram274",
       linkedin: "https://linkedin.com/in/abhiram-kosuru-7974b6231/",
@@ -20,39 +20,27 @@ const Team = () => {
     },
     {
       id: 2,
-      name: "Sarah Chen",
-      role: "UI/UX Designer",
+      name: "Nikith Nag",
+      role: "UI/UX Designer & Web App Developer",
       image: "/placeholder.svg",
-      portfolio: "https://sarahchen-design.com",
-      description: "Creative designer focused on user-centered design principles and creating beautiful, functional interfaces that enhance user experience.",
-      skills: ["Figma", "Adobe XD", "Prototyping", "User Research", "Design Systems"],
-      github: "https://github.com/sarahchen",
-      linkedin: "https://linkedin.com/in/sarahchen",
-      email: "sarah.chen@example.com"
+      portfolio: "#",
+      description: "Creative designer and developer focused on user-centered design principles and creating beautiful, functional web applications with excellent user experience.",
+      skills: ["Figma", "React", "UI/UX Design", "Web Development", "Prototyping"],
+      github: "#",
+      linkedin: "#",
+      email: "nikithnag@example.com"
     },
     {
       id: 3,
-      name: "Michael Rodriguez",
-      role: "Backend Developer",
+      name: "Satya Datta",
+      role: "Web App Developer & Cloud Engineer",
       image: "/placeholder.svg",
-      portfolio: "https://michaelrod-dev.com",
-      description: "Backend specialist with expertise in scalable architectures, cloud computing, and database optimization for high-performance applications.",
-      skills: ["Node.js", "Python", "AWS", "MongoDB", "PostgreSQL"],
-      github: "https://github.com/michaelrod",
-      linkedin: "https://linkedin.com/in/michaelrodriguez",
-      email: "michael.rodriguez@example.com"
-    },
-    {
-      id: 4,
-      name: "Priya Sharma",
-      role: "DevOps Engineer",
-      image: "/placeholder.svg",
-      portfolio: "https://priyasharma-devops.com",
-      description: "DevOps expert passionate about automation, CI/CD pipelines, and cloud infrastructure management for seamless deployment processes.",
-      skills: ["Docker", "Kubernetes", "AWS", "Jenkins", "Terraform"],
-      github: "https://github.com/priyasharma",
-      linkedin: "https://linkedin.com/in/priyasharma",
-      email: "priya.sharma@example.com"
+      portfolio: "#",
+      description: "Web application developer with strong interest in cloud technologies. Specializes in building scalable web solutions and cloud infrastructure management.",
+      skills: ["React", "Node.js", "AWS", "Cloud Computing", "Web Development"],
+      github: "#",
+      linkedin: "#",
+      email: "satyadatta@example.com"
     }
   ];
 
@@ -66,11 +54,11 @@ const Team = () => {
             </span>
           </h2>
           <p className="text-lg text-muted-foreground max-w-3xl mx-auto">
-            A diverse group of talented professionals working together to create innovative solutions and deliver exceptional results.
+            A dynamic trio of talented developers and designers working together to create innovative solutions and deliver exceptional results.
           </p>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-8">
+        <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 max-w-6xl mx-auto">
           {teamMembers.map((member) => (
             <Card key={member.id} className="group hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2 bg-gradient-to-br from-card via-card to-accent/5 border-2 hover:border-purple-500/20">
               <CardHeader className="text-center pb-4">
