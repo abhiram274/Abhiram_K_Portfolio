@@ -34,7 +34,73 @@ const AIChatbot = () => {
     scrollToBottom();
   }, [messages]);
 
-  const getBotResponse = (userMessage: string): string => {
+  const getOpenAIResponse = async (userMessage: string): Promise<string> => {
+    try {
+      const response = await fetch('https://api.openai.com/v1/chat/completions', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+          'Authorization': 'Bearer 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'
+        },
+        body: JSON.stringify({
+          model: 'gpt-3.5-turbo',
+          messages: [
+            {
+              role: 'system',
+              content: `You are Abhiram Kosuru, a passionate Computer Science student specializing in AI & ML. You're friendly, enthusiastic, and love talking about technology. Here's your background:
+
+EDUCATION:
+- Bachelor of Technology in Computer Science and Engineering (AI ML) at Anil Neerukonda Institute of Technology and Sciences (Ongoing)
+- Diploma in Computer Engineering from Government Polytechnic College, Rebaka, Anakapalli
+- 10th Grade from Little Flowers E.M High School
+
+WORK EXPERIENCE:
+- Web Developer Intern at VBS Business Solutions (6 months) - Developed and optimized web applications, enhanced UI/UX, gained expertise in teamwork and project management
+
+TECHNICAL SKILLS:
+- Programming Languages: Python, C++, Java, JavaScript, Dart (Flutter)
+- Web Technologies: HTML, CSS, React, Node.js, Next.js, Firebase, SCSS, PHP
+- Databases: MySQL, MongoDB
+
+KEY PROJECTS:
+- AI Virtual Assistant (Python) with voice recognition and task automation
+- College Website Development with full-stack integration
+- Real-time Chatting Web Application using React and Firebase
+- Various Management Systems (Internship, Website Management)
+- Freelancing Web Application using Next.js and Node.js
+- Flutter-Based Mini Projects (OTP Generator, To-Do List App)
+
+HOBBIES:
+- Watching sci-fi movies and exploring futuristic concepts
+- Learning about space, galaxies, and aerospace technology
+- Reading about rockets and engineering advancements
+- Listening to music and spending time with nature
+
+Respond as if you're having a personal conversation. Be enthusiastic about your work and always ready to discuss your projects and experiences. Keep responses conversational and engaging.`
+            },
+            {
+              role: 'user',
+              content: userMessage
+            }
+          ],
+          max_tokens: 200,
+          temperature: 0.7
+        })
+      });
+
+      if (response.ok) {
+        const data = await response.json();
+        return data.choices[0].message.content;
+      } else {
+        throw new Error('OpenAI API request failed');
+      }
+    } catch (error) {
+      console.error('OpenAI API Error:', error);
+      return getFallbackResponse(userMessage);
+    }
+  };
+
+  const getFallbackResponse = (userMessage: string): string => {
     const message = userMessage.toLowerCase();
     
     // Greetings
@@ -44,11 +110,10 @@ const AIChatbot = () => {
         "Hey! Thanks for stopping by my portfolio! How can I help you today?",
         "Hi there! I'm excited to chat with you. What brings you to my portfolio today?",
         "Hello! Welcome to my digital space! Feel free to ask me anything about my projects or journey.",
-            "Hello! 👋 Glad you're here. What would you like to explore — my projects, skills, or experience?",
-      "Hey! Welcome to my portfolio — feel free to ask me anything!",
-      "Hi there! 😊 Curious about my AI/ML projects or web development work?",
-      "Great to see you! What would you like to know about me?"
-
+        "Hello! 👋 Glad you're here. What would you like to explore — my projects, skills, or experience?",
+        "Hey! Welcome to my portfolio — feel free to ask me anything!",
+        "Hi there! 😊 Curious about my AI/ML projects or web development work?",
+        "Great to see you! What would you like to know about me?"
       ];
       return greetings[Math.floor(Math.random() * greetings.length)];
     }
@@ -59,18 +124,14 @@ const AIChatbot = () => {
     }
     
     // Skills related
-  // Skills
-  if (message.includes('skill') || message.includes('technology') || message.includes('programming')) {
-    return "I’m skilled in Python, C++, Java, JavaScript, Designing (UI/UX),Dart and few more. I use React, Node.js, and Next.js for web development, and build mobile apps using Flutter. Databases I work with include Firebase, MySQL, and MongoDB. I'm also comfortable with SCSS and PHP. 💻";
-  }
-
+    if (message.includes('skill') || message.includes('technology') || message.includes('programming')) {
+      return "I'm skilled in Python, C++, Java, JavaScript, Designing (UI/UX), Dart and few more. I use React, Node.js, and Next.js for web development, and build mobile apps using Flutter. Databases I work with include Firebase, MySQL, and MongoDB. I'm also comfortable with SCSS and PHP. 💻";
+    }
     
     // Projects
     if (message.includes('project') || message.includes('work') || message.includes('built') || message.includes('portfolio')) {
       return "I've worked on some exciting projects! My favorites include ReadGro (a learning platform), an AI Virtual Assistant built with Python, real-time chat applications with React and Firebase, and various Flutter mobile apps. I've also developed college management systems and freelancing platforms. Each project taught me something new! Which one would you like to hear more about? 🎯";
     }
-
-
     
     // Education
     if (message.includes('education') || message.includes('study') || message.includes('college') || message.includes('degree') || message.includes('university')) {
@@ -92,55 +153,11 @@ const AIChatbot = () => {
       return "AI & ML is my passion! 🤖 I'm specializing in it during my B.Tech and have worked on projects like linear regression for house price prediction, heart disease classification, and face recognition systems. I built an AI Virtual Assistant during my diploma too! The field is evolving so fast and I love being part of it!";
     }
     
-    // Hobbies/Personal
-    if (message.includes('hobby') || message.includes('hobbies') || message.includes('interest') || message.includes('free time') || message.includes('personal')) {
-      return "When I'm not coding, I'm probably watching sci-fi movies (I'm a huge space nerd! 🌌), reading about rockets and aerospace technology, or just enjoying music. I also love spending time in nature and taking care of farm animals - it keeps me grounded and inspired!";
-    }
-    
-    // Specific technologies
-    if (message.includes('react') || message.includes('javascript') || message.includes('node')) {
-      return "React is one of my favorite frameworks! I've built several applications with it, including real-time chat apps and community platforms. Combined with Node.js for the backend, it's such a powerful stack. The component-based architecture makes development so much more enjoyable! ⚛️";
-    }
-    
-    if (message.includes('python')) {
-      return "Python is my go-to language for AI/ML projects! I used it to build my AI Virtual Assistant and implement various machine learning algorithms. It's so versatile - from web scraping to data analysis to building neural networks. What Python projects are you working on? 🐍";
-    }
-    
-    if (message.includes('flutter') || message.includes('mobile') || message.includes('app')) {
-      return "Flutter is amazing for mobile development! I've built apps like OTP generators and To-Do list applications with it. The fact that you can write once and deploy to both Android and iOS is incredible. Plus, integrating it with Node.js backends makes for really robust mobile solutions! 📱";
-    }
-    
-    // Location/Availability
-    if (message.includes('available') || message.includes('location') || message.includes('where') || message.includes('from')) {
-      return "I'm based in India and I'm definitely available for both remote and local opportunities! I love working with teams from different parts of the world - it brings such diverse perspectives to projects. Are you working on something interesting? 🌍";
-    }
-    
-    // Learning/Growth
-    if (message.includes('learn') || message.includes('future') || message.includes('goals') || message.includes('next')) {
-      return "I'm always learning! Currently diving deeper into advanced AI/ML concepts, exploring cloud technologies, and keeping up with the latest in web development. My goal is to work on projects that can make a real impact on people's lives. What new technologies are you excited about? 📚";
-    }
-    
-    // Fun questions
-    if (message.includes('favorite') || message.includes('best') || message.includes('like most')) {
-      return "That's a tough one! I'd say my favorite project so far was the AI Virtual Assistant because it combined so many different technologies and really challenged me. But honestly, I love every project I work on because each one teaches me something new! What's your favorite type of project to work on? 🤔";
-    }
-    
-    // Thank you
-    if (message.includes('thank') || message.includes('thanks') || message.includes('awesome') || message.includes('great')) {
-      return "You're so welcome! I really appreciate you taking the time to chat with me. It means a lot! If you have any other questions or just want to talk tech, I'm here. Thanks for checking out my portfolio! 😊";
-    }
-    
-    // Advice/Tips
-    if (message.includes('advice') || message.includes('tip') || message.includes('suggest') || message.includes('recommend')) {
-      return "My best advice? Never stop building! Whether it's a small script or a full-scale application, every project teaches you something valuable. Also, don't be afraid to experiment with new technologies - some of my best learning experiences came from stepping out of my comfort zone. What are you working on currently? 💡";
-    }
-    
     // Default responses for unmatched queries
     const defaultResponses = [
       "That's an interesting question! I'd love to help you with that. Could you tell me more about what specifically you'd like to know? I'm here to chat about anything related to my work, skills, or experience! 🤗",
       "I'm not sure I caught that exactly, but I'm here to help! Feel free to ask me about my projects, technical skills, education, or anything else you're curious about. What would you like to know? 😊",
-      "Hmm, let me think about that! I'm always happy to discuss my development journey, the technologies I work with, or any projects that might interest you. What aspect would you like to explore? 🚀",
-      "Great question! I love chatting about technology, development, and my projects. Is there something specific about my background or work that you'd like to know more about? I'm all ears! 👂"
+      "Hmm, let me think about that! I'm always happy to discuss my development journey, the technologies I work with, or any projects that might interest you. What aspect would you like to explore? 🚀"
     ];
     
     return defaultResponses[Math.floor(Math.random() * defaultResponses.length)];
@@ -160,18 +177,29 @@ const AIChatbot = () => {
     setInputValue("");
     setIsTyping(true);
 
-    // Simulate more natural typing delay
-    setTimeout(() => {
+    try {
+      const botResponseText = await getOpenAIResponse(inputValue);
+      
       const botResponse: Message = {
         id: (Date.now() + 1).toString(),
-        text: getBotResponse(inputValue),
+        text: botResponseText,
         isUser: false,
         timestamp: new Date()
       };
       
       setMessages(prev => [...prev, botResponse]);
+    } catch (error) {
+      console.error('Error getting bot response:', error);
+      const fallbackResponse: Message = {
+        id: (Date.now() + 1).toString(),
+        text: "Sorry, I'm having trouble connecting right now. But I'm still here to chat! Feel free to ask me about my projects, skills, or experience. 😊",
+        isUser: false,
+        timestamp: new Date()
+      };
+      setMessages(prev => [...prev, fallbackResponse]);
+    } finally {
       setIsTyping(false);
-    }, 1500 + Math.random() * 1000); // Random delay between 1.5-2.5 seconds
+    }
   };
 
   const handleKeyPress = (e: React.KeyboardEvent) => {

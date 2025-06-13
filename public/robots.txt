@@ -1,16 +1,41 @@
+
+User-agent: *
+Allow: /
+Allow: /#about
+Allow: /#skills
+Allow: /#projects
+Allow: /#contact
+
+# Major search engines
 User-agent: Googlebot
 Allow: /
 
 User-agent: Bingbot
 Allow: /
 
-User-agent: Twitterbot
+User-agent: Slurp
+Allow: /
+
+User-agent: DuckDuckBot
+Allow: /
+
+User-agent: Baiduspider
+Allow: /
+
+User-agent: YandexBot
 Allow: /
 
 User-agent: facebookexternalhit
 Allow: /
 
-User-agent: *
+User-agent: Twitterbot
 Allow: /
 
+User-agent: LinkedInBot
+Allow: /
+
+# Crawl delay
+Crawl-delay: 1
+
+# Sitemap location
 Sitemap: https://abhiram-portfolio-six.vercel.app/sitemap.xml
