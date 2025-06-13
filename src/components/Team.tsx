@@ -125,7 +125,7 @@ const Team = () => {
                         variant="outline" 
                         size="sm" 
                         className="flex-1 hover:bg-green-500/10 hover:border-green-500/20"
-                        onClick={() => window.open(mailto:${member.email}, '_blank')}
+onClick={() => window.open(`mailto:${member.email}`, '_blank')}
                       >
                         <Mail className="w-4 h-4" />
                       </Button>
